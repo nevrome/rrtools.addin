@@ -1,0 +1,4 @@
+Name: rrtools Assistant
+Description: GUI tool to work with the rrtools functions
+Binding: rrtools_assistant
+Interactive: true
