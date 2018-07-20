@@ -12,7 +12,6 @@ rrtools_assistant <- function() {
       right = NULL
     ),
     miniUI::miniTabstripPanel(
-      
       miniUI::miniTabPanel(
         title = "Overview",
         icon = shiny::icon("question")
@@ -24,19 +23,13 @@ rrtools_assistant <- function() {
         shiny::fillRow(
           flex = c(1, 2),
           shiny::fillCol(
-            shiny::HTML("
-              <div class=\"explainbox\">
-                <h4> New repo... </h4>
-                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing elit duis tristique sollicitudin nibh. Libero id faucibus nisl tincidunt eget. Praesent semper feugiat nibh sed. </p>
-              </div>
-            "
+            shiny::div(class = "explainbox",
+              h4("New repo..."),
+              p("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing elit duis tristique sollicitudin nibh. Libero id faucibus nisl tincidunt eget. Praesent semper feugiat nibh sed.")
             ),
-            shiny::HTML("
-              <div class=\"explainbox\">
-                <h4> The function <b>rrtools::use_compendium</b> </h4>
-                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing elit duis tristique sollicitudin nibh. Libero id faucibus nisl tincidunt eget. Praesent semper feugiat nibh sed. </p>
-              </div>
-            "
+            shiny::div(class = "explainbox",
+              h4("The function", strong("rrtools::use_compendium")),
+              p("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing elit duis tristique sollicitudin nibh. Libero id faucibus nisl tincidunt eget. Praesent semper feugiat nibh sed.")
             )
           ),
           shiny::fillCol(
@@ -51,19 +44,13 @@ rrtools_assistant <- function() {
         shiny::fillRow(
           flex = c(1, 1, 1),
           shiny::fillCol(
-            shiny::HTML("
-              <div class=\"explainbox\">
-                <h4> What is a license and why should I care? </h4>
-                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing elit duis tristique sollicitudin nibh. Libero id faucibus nisl tincidunt eget. Praesent semper feugiat nibh sed. </p>
-              </div>
-            "
+            shiny::div(class = "explainbox",
+              h4("What is a license and why should I care?"),
+              p("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing elit duis tristique sollicitudin nibh. Libero id faucibus nisl tincidunt eget. Praesent semper feugiat nibh sed.")
             ),
-            shiny::HTML("
-              <div class=\"explainbox\">
-                <h4> The function <b>usethis::use_..._license()</b> </h4>
-                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing elit duis tristique sollicitudin nibh. Libero id faucibus nisl tincidunt eget. Praesent semper feugiat nibh sed. </p>
-              </div>
-            "
+            shiny::div(class = "explainbox",
+              h4("The function", strong("usethis::use_..._license")),
+              p("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing elit duis tristique sollicitudin nibh. Libero id faucibus nisl tincidunt eget. Praesent semper feugiat nibh sed.")
             )
           ),
           shiny::fillCol(
@@ -84,19 +71,13 @@ rrtools_assistant <- function() {
         shiny::fillRow(
           flex = c(1, 2),
           shiny::fillCol(
-            shiny::HTML("
-              <div class=\"explainbox\">
-                <h4> Version Control with git? </h4>
-                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing elit duis tristique sollicitudin nibh. Libero id faucibus nisl tincidunt eget. Praesent semper feugiat nibh sed. </p>
-              </div>
-            "
-            ),
-            shiny::HTML("
-              <div class=\"explainbox\">
-                <h4> The function <b>usethis::use_git()</b> </h4>
-                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing elit duis tristique sollicitudin nibh. Libero id faucibus nisl tincidunt eget. Praesent semper feugiat nibh sed. </p>
-              </div>
-            "
+            shiny::div(class = "explainbox",
+              h4("Version Control with git?"),
+              p("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing elit duis tristique sollicitudin nibh. Libero id faucibus nisl tincidunt eget. Praesent semper feugiat nibh sed.")
+           ),
+            shiny::div(class = "explainbox",
+              h4("The function", strong("usethis::use_git")),
+              p("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing elit duis tristique sollicitudin nibh. Libero id faucibus nisl tincidunt eget. Praesent semper feugiat nibh sed.")
             )
           ),
           shiny::fillCol(
@@ -111,19 +92,13 @@ rrtools_assistant <- function() {
         shiny::fillRow(
           flex = c(1, 2),
           shiny::fillCol(
-            shiny::HTML("
-              <div class=\"explainbox\">
-                <h4> A remote git repository? </h4>
-                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing elit duis tristique sollicitudin nibh. Libero id faucibus nisl tincidunt eget. Praesent semper feugiat nibh sed. </p>
-              </div>
-            "
-            ),
-            shiny::HTML("
-              <div class=\"explainbox\">
-                <h4> The function <b>usethis::use_github()</b> </h4>
-                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing elit duis tristique sollicitudin nibh. Libero id faucibus nisl tincidunt eget. Praesent semper feugiat nibh sed. </p>
-              </div>
-            "
+            shiny::div(class = "explainbox",
+              h4("A remote git repository?"),
+              p("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing elit duis tristique sollicitudin nibh. Libero id faucibus nisl tincidunt eget. Praesent semper feugiat nibh sed.")
+           ),
+            shiny::div(class = "explainbox",
+              h4("The function", strong("usethis::use_github")),
+              p("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing elit duis tristique sollicitudin nibh. Libero id faucibus nisl tincidunt eget. Praesent semper feugiat nibh sed.")
             )
           ),
           shiny::fillCol(
@@ -138,19 +113,13 @@ rrtools_assistant <- function() {
         shiny::fillRow(
           flex = c(1, 2),
           shiny::fillCol(
-            shiny::HTML("
-              <div class=\"explainbox\">
-                <h4> A nice README? </h4>
-                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing elit duis tristique sollicitudin nibh. Libero id faucibus nisl tincidunt eget. Praesent semper feugiat nibh sed. </p>
-              </div>
-            "
+            shiny::div(class = "explainbox",
+              h4("A nice README?"),
+              p("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing elit duis tristique sollicitudin nibh. Libero id faucibus nisl tincidunt eget. Praesent semper feugiat nibh sed.")
             ),
-            shiny::HTML("
-              <div class=\"explainbox\">
-                <h4> The function <b>rrtools::use_readme_rmd()</b> </h4>
-                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing elit duis tristique sollicitudin nibh. Libero id faucibus nisl tincidunt eget. Praesent semper feugiat nibh sed. </p>
-              </div>
-            "
+            shiny::div(class = "explainbox",
+              h4("The function", strong("rrtools::use_readme_rmd")),
+              p("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing elit duis tristique sollicitudin nibh. Libero id faucibus nisl tincidunt eget. Praesent semper feugiat nibh sed.")
             )
           ),
           shiny::fillCol(
@@ -165,19 +134,13 @@ rrtools_assistant <- function() {
         shiny::fillRow(
           flex = c(1, 2),
           shiny::fillCol(
-            shiny::HTML("
-              <div class=\"explainbox\">
-                <h4> Bringing order into my files? </h4>
-                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing elit duis tristique sollicitudin nibh. Libero id faucibus nisl tincidunt eget. Praesent semper feugiat nibh sed. </p>
-              </div>
-            "
+            shiny::div(class = "explainbox",
+              h4("Bringing order into my files?"),
+              p("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing elit duis tristique sollicitudin nibh. Libero id faucibus nisl tincidunt eget. Praesent semper feugiat nibh sed.")
             ),
-            shiny::HTML("
-              <div class=\"explainbox\">
-                <h4> The function <b>rrtools::use_analysis()</b> </h4>
-                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing elit duis tristique sollicitudin nibh. Libero id faucibus nisl tincidunt eget. Praesent semper feugiat nibh sed. </p>
-              </div>
-            "
+            shiny::div(class = "explainbox",
+              h4("The function", strong("rrtools::use_analysis")),
+              p("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing elit duis tristique sollicitudin nibh. Libero id faucibus nisl tincidunt eget. Praesent semper feugiat nibh sed.")
             )
           ),
           shiny::fillCol(
@@ -192,19 +155,13 @@ rrtools_assistant <- function() {
         shiny::fillRow(
           flex = c(1, 2),
           shiny::fillCol(
-            shiny::HTML("
-              <div class=\"explainbox\">
-                <h4> Virtualization with docker? </h4>
-                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing elit duis tristique sollicitudin nibh. Libero id faucibus nisl tincidunt eget. Praesent semper feugiat nibh sed. </p>
-              </div>
-            "
+            shiny::div(class = "explainbox",
+              h4("Virtualization with docker?"),
+              p("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing elit duis tristique sollicitudin nibh. Libero id faucibus nisl tincidunt eget. Praesent semper feugiat nibh sed.")
             ),
-            shiny::HTML("
-              <div class=\"explainbox\">
-                <h4> The function <b>rrtools::use_dockerfile()</b> </h4>
-                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing elit duis tristique sollicitudin nibh. Libero id faucibus nisl tincidunt eget. Praesent semper feugiat nibh sed. </p>
-              </div>
-            "
+            shiny::div(class = "explainbox",
+              h4("The function", strong("rrtools::use_dockerfile")),
+              p("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing elit duis tristique sollicitudin nibh. Libero id faucibus nisl tincidunt eget. Praesent semper feugiat nibh sed.")
             )
           ),
           shiny::fillCol(
@@ -219,19 +176,13 @@ rrtools_assistant <- function() {
         shiny::fillRow(
           flex = c(1, 2),
           shiny::fillCol(
-            shiny::HTML("
-              <div class=\"explainbox\">
-                <h4> Continous Integration? </h4>
-                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing elit duis tristique sollicitudin nibh. Libero id faucibus nisl tincidunt eget. Praesent semper feugiat nibh sed. </p>
-              </div>
-            "
+            shiny::div(class = "explainbox",
+              h4("Continous Integration?"),
+              p("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing elit duis tristique sollicitudin nibh. Libero id faucibus nisl tincidunt eget. Praesent semper feugiat nibh sed.")
             ),
-            shiny::HTML("
-              <div class=\"explainbox\">
-                <h4> The function <b>rrtools::use_travis()</b> </h4>
-                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing elit duis tristique sollicitudin nibh. Libero id faucibus nisl tincidunt eget. Praesent semper feugiat nibh sed. </p>
-              </div>
-            "
+            shiny::div(class = "explainbox",
+              h4("The function", strong("rrtools::use_travis")),
+              p("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing elit duis tristique sollicitudin nibh. Libero id faucibus nisl tincidunt eget. Praesent semper feugiat nibh sed.")
             )
           ),
           shiny::fillCol(
@@ -246,19 +197,13 @@ rrtools_assistant <- function() {
         shiny::fillRow(
           flex = c(1, 2),
           shiny::fillCol(
-            shiny::HTML("
-              <div class=\"explainbox\">
-                <h4> Automatic tests? </h4>
-                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing elit duis tristique sollicitudin nibh. Libero id faucibus nisl tincidunt eget. Praesent semper feugiat nibh sed. </p>
-              </div>
-            "
+            shiny::div(class = "explainbox",
+              h4("Automatic tests?"),
+              p("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing elit duis tristique sollicitudin nibh. Libero id faucibus nisl tincidunt eget. Praesent semper feugiat nibh sed.")
             ),
-            shiny::HTML("
-              <div class=\"explainbox\">
-                <h4> The function <b>usethis::use_testthat()</b> </h4>
-                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing elit duis tristique sollicitudin nibh. Libero id faucibus nisl tincidunt eget. Praesent semper feugiat nibh sed. </p>
-              </div>
-            "
+            shiny::div(class = "explainbox",
+              h4("The function", strong("usethis::use_testthat")),
+              p("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing elit duis tristique sollicitudin nibh. Libero id faucibus nisl tincidunt eget. Praesent semper feugiat nibh sed.")
             )
           ),
           shiny::fillCol(
