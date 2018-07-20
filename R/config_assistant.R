@@ -78,7 +78,7 @@ config_assistant <- function() {
           shiny::fillCol(
             shiny::div(
               id = "license_help", class = "helpbox",
-              shiny::HTML(rrtools.addin::extract_help_as_html("usethis", "licenses"))
+              shiny::HTML(extract_help_as_html("usethis", "licenses"))
             )
           )
         )
