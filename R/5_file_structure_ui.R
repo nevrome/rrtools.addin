@@ -4,7 +4,7 @@ file_structure_ui <- function() {
     title = "5. File structure",
     icon = shiny::icon("folder"),
     shiny::fillRow(
-      flex = c(1, 2),
+      flex = c(1, 1, 1),
       shiny::fillCol(
         shiny::div(class = "explainbox",
                    h4("Bringing order into my files?"),
@@ -17,6 +17,12 @@ file_structure_ui <- function() {
       ),
       shiny::fillCol(
         shiny::HTML("# rrtools::use_analysis()")
+      ),
+      shiny::fillCol(
+        shiny::div(
+          id = "file_structure_help", class = "helpbox",
+          shiny::HTML(extract_help_as_html("rrtools", "use_analysis"))
+        )
       )
     )
   )

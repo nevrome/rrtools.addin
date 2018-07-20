@@ -4,7 +4,7 @@ tests_ui <- function() {
     title = "8. Tests",
     icon = shiny::icon("bolt"),
     shiny::fillRow(
-      flex = c(1, 2),
+      flex = c(1, 1, 1),
       shiny::fillCol(
         shiny::div(class = "explainbox",
                    h4("Automatic tests?"),
@@ -17,6 +17,12 @@ tests_ui <- function() {
       ),
       shiny::fillCol(
         shiny::HTML("# usethis::use_testthat()")
+      ),
+      shiny::fillCol(
+        shiny::div(
+          id = "tests_help", class = "helpbox",
+          shiny::HTML(extract_help_as_html("usethis", "use_testthat"))
+        )
       )
     )
   )	

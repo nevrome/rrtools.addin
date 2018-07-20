@@ -4,7 +4,7 @@ versioning_ui <- function() {
     title = "2. Versioning",
     icon = shiny::icon("code-fork"),
     shiny::fillRow(
-      flex = c(1, 2),
+      flex = c(1, 1, 1),
       shiny::fillCol(
         shiny::div(class = "explainbox",
                    h4("Version Control with git?"),
@@ -17,6 +17,12 @@ versioning_ui <- function() {
       ),
       shiny::fillCol(
         shiny::HTML("# usethis::use_git()")
+      ),
+      shiny::fillCol(
+        shiny::div(
+          id = "versioning_help", class = "helpbox",
+          shiny::HTML(extract_help_as_html("usethis", "use_git"))
+        )
       )
     )
   )

@@ -4,7 +4,7 @@ setup_ui <- function() {
     title = "0. Setup",
     icon = shiny::icon("globe"),
     shiny::fillRow(
-      flex = c(1, 2),
+      flex = c(1, 1, 1),
       shiny::fillCol(
         shiny::div(class = "explainbox",
                    h4("New repo..."),
@@ -17,6 +17,12 @@ setup_ui <- function() {
       ),
       shiny::fillCol(
         shiny::HTML("# usethis::use_git()")
+      ),
+      shiny::fillCol(
+        shiny::div(
+          id = "setup_help", class = "helpbox",
+          shiny::HTML(extract_help_as_html("rrtools", "use_compendium"))
+        )
       )
     )
   )

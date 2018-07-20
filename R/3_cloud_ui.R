@@ -4,7 +4,7 @@ cloud_ui <- function() {
     title = "3. Cloud",
     icon = shiny::icon("cloud"),
     shiny::fillRow(
-      flex = c(1, 2),
+      flex = c(1, 1, 1),
       shiny::fillCol(
         shiny::div(class = "explainbox",
                    h4("A remote git repository?"),
@@ -17,6 +17,12 @@ cloud_ui <- function() {
       ),
       shiny::fillCol(
         shiny::HTML("# usethis::use_github()")
+      ),
+      shiny::fillCol(
+        shiny::div(
+          id = "cloud_help", class = "helpbox",
+          shiny::HTML(extract_help_as_html("usethis", "use_github"))
+        )
       )
     )
   )

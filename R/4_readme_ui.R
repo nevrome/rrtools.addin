@@ -4,7 +4,7 @@ readme_ui <- function() {
 		title = "4. Readme",
 		icon = shiny::icon("file-text"),
 		shiny::fillRow(
-		  flex = c(1, 2),
+		  flex = c(1, 1, 1),
 		  shiny::fillCol(
 		    shiny::div(class = "explainbox",
 		               h4("A nice README?"),
@@ -17,6 +17,12 @@ readme_ui <- function() {
 		  ),
 		  shiny::fillCol(
 		    shiny::HTML("# rrtools::use_readme_rmd()")
+		  ),
+		  shiny::fillCol(
+		    shiny::div(
+		      id = "readme_help", class = "helpbox",
+		      shiny::HTML(extract_help_as_html("usethis", "use_readme_rmd"))
+		    )
 		  )
 		)
 	)

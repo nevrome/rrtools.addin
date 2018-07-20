@@ -4,7 +4,7 @@ ci_cd_ui <- function() {
     title = "7. CI/CD",
     icon = shiny::icon("industry"),
     shiny::fillRow(
-      flex = c(1, 2),
+      flex = c(1, 1, 1),
       shiny::fillCol(
         shiny::div(class = "explainbox",
                    h4("Continous Integration?"),
@@ -17,6 +17,12 @@ ci_cd_ui <- function() {
       ),
       shiny::fillCol(
         shiny::HTML("# rrtools::use_travis()")
+      ),
+      shiny::fillCol(
+        shiny::div(
+          id = "ci_cd_help", class = "helpbox",
+          shiny::HTML(extract_help_as_html("rrtools", "use_travis"))
+        )
       )
     )
   )
