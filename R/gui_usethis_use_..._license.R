@@ -1,6 +1,3 @@
-#' test
-#'
-#' @export
 gui_usethis_use_..._license <- function() {
   shiny::div(
     id = "license", class = "function_interface",

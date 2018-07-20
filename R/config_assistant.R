@@ -1,7 +1,7 @@
 #' rrtools Rstudio Addin 2
 #'
 #' @export
-config_assistant <- function() {
+rrtools_assistant <- function() {
 
   ui <- miniUI::miniPage(
     shiny::tags$style(
@@ -101,7 +101,7 @@ config_assistant <- function() {
             )
           ),
           shiny::fillCol(
-            rrtools.addin::gui_usethis_use_..._license()
+            gui_usethis_use_..._license()
           ),
           shiny::fillCol(
             shiny::div(

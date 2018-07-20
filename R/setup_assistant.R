@@ -1,6 +1,3 @@
-#' rrtools Rstudio Addin
-#'
-#' @export
 setup_assistant <- function() {
 
   ui <- miniUI::miniPage(
