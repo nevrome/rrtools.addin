@@ -46,9 +46,37 @@ config_assistant <- function() {
       right = NULL
     ),
     miniUI::miniTabstripPanel(
+      
       miniUI::miniTabPanel(
         title = "Overview",
         icon = shiny::icon("question")
+      ),
+      #### 0. Setup ####
+      miniUI::miniTabPanel(
+        title = "0. Setup",
+        icon = shiny::icon("globe"),
+        shiny::fillRow(
+          flex = c(1, 2),
+          shiny::fillCol(
+            shiny::HTML("
+              <div class=\"explainbox\">
+                <h4> New repo... </h4>
+                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing elit duis tristique sollicitudin nibh. Libero id faucibus nisl tincidunt eget. Praesent semper feugiat nibh sed. </p>
+              </div>
+            "
+            ),
+            shiny::HTML("
+              <div class=\"explainbox\">
+                <h4> The function <b>rrtools::use_compendium</b> </h4>
+                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing elit duis tristique sollicitudin nibh. Libero id faucibus nisl tincidunt eget. Praesent semper feugiat nibh sed. </p>
+              </div>
+            "
+            )
+          ),
+          shiny::fillCol(
+            shiny::HTML("# usethis::use_git()")
+          )
+        )
       ),
       #### 1. License ####
       miniUI::miniTabPanel(
