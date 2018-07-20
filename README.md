@@ -1,1 +1,1 @@
-# rrtools_addin
+# rrtools.addin
