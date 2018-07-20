@@ -4,42 +4,8 @@
 rrtools_assistant <- function() {
 
   ui <- miniUI::miniPage(
-    shiny::tags$style(
-      shiny::HTML("
-        .modal-body {
-          height:300px;
-          overflow-y:scroll;
-        }
-        .explainbox {
-          position: relative;
-          height: 170px;
-          background: #f2f2f2;
-          border-radius: 15px;
-          padding: 15px;
-          margin-top: 10px;
-          margin-bottom: 0px;
-          margin-right: 10px;
-          margin-left: 10px;
-        }
-        .function_interface {
-          overflow-y: auto;
-          height: 360px;
-          position: relative;
-        }
-        .helpbox {
-          overflow-y: auto;
-          height: 360px;
-          position: relative;
-          background: #f2f2f2;
-          border-radius: 15px;
-          padding: 15px;
-          margin-top: 10px;
-          margin-bottom: 0px;
-          margin-right: 10px;
-          margin-left: 10px;
-        }
-      "
-      )
+    tags$head(
+      includeCSS(system.file("style/rrtools_assistant_stylesheet.css", package = "rrtools.addin"))
     ),
     miniUI::gadgetTitleBar(
       "rrtools Configuration Assistant",
