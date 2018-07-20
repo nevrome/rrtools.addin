@@ -271,10 +271,6 @@ config_assistant <- function() {
             shiny::HTML("# usethis::use_testthat()")
           )
         )
-      ),
-      miniUI::miniTabPanel(
-        title = "Run",
-        icon = shiny::icon("arrow-circle-right")
       )
     )
   )
