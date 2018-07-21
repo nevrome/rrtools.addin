@@ -1,8 +1,8 @@
 rrtools_assistant_ui <- function() {
 
   miniUI::miniPage(
-    tags$head(
-      includeCSS(system.file("style/rrtools_assistant_stylesheet.css", package = "rrtools.addin"))
+    shiny::tags$head(
+      shiny::includeCSS(system.file("style/rrtools_assistant_stylesheet.css", package = "rrtools.addin"))
     ),
     miniUI::gadgetTitleBar(
       "rrtools Configuration Assistant",

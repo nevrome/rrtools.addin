@@ -7,12 +7,12 @@ file_structure_ui <- function() {
       flex = c(1, 1, 1),
       shiny::fillCol(
         shiny::div(class = "explainbox",
-                   h4("Bringing order into my files?"),
-                   p("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing elit duis tristique sollicitudin nibh. Libero id faucibus nisl tincidunt eget. Praesent semper feugiat nibh sed.")
+                   shiny::h4("Bringing order into my files?"),
+                   shiny::p("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing elit duis tristique sollicitudin nibh. Libero id faucibus nisl tincidunt eget. Praesent semper feugiat nibh sed.")
         ),
         shiny::div(class = "explainbox",
-                   h4("The function", strong("rrtools::use_analysis")),
-                   p("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing elit duis tristique sollicitudin nibh. Libero id faucibus nisl tincidunt eget. Praesent semper feugiat nibh sed.")
+                   shiny::h4("The function", shiny::strong("rrtools::use_analysis")),
+                   shiny::p("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing elit duis tristique sollicitudin nibh. Libero id faucibus nisl tincidunt eget. Praesent semper feugiat nibh sed.")
         )
       ),
       shiny::fillCol(
