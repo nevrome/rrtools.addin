@@ -9,9 +9,13 @@ license_server <- function(input, output, session) {
       Apache_v2 = usethis::use_apl2_license,
       GPL_v3 = usethis::use_gpl3_license
     )
-
-    license_function(input$license_names)
-
+    
+    rstudioapi::sendToConsole(
+      paste0("license_function(\"", paste(input$license_names), "\")")
+    )
+    
+    shiny::stopApp()
+    
   })
 
 }
