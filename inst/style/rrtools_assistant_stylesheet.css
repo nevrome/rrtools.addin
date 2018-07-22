@@ -1,15 +1,23 @@
 .modal-body {
-  height:300px;
-  overflow-y:scroll;
+  height: 300px;
+  overflow-y: scroll;
 }
-.explainbox {
+.explainbox_1 {
   position: relative;
   height: 170px;
-  background: #f2f2f2;
+  background: #b2ff91;
   border-radius: 15px;
   padding: 15px;
   margin-top: 10px;
-  margin-bottom: 0px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+.explainbox_2 {
+  position: relative;
+  height: 170px;
+  background: #b7daff;
+  border-radius: 15px;
+  padding: 15px;
   margin-right: 10px;
   margin-left: 10px;
 }
