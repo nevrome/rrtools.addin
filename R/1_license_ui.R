@@ -1,5 +1,7 @@
-license_ui <- function() {
+license_ui <- function(id) {
 
+  ns <- shiny::NS(id)
+  
 	miniUI::miniTabPanel(
     title = "1. License",
     icon = shiny::icon("handshake-o"),
@@ -16,37 +18,36 @@ license_ui <- function() {
         )
       ),
       shiny::fillCol(
-        gui_usethis_use_..._license()
+        shiny::div(
+          id = ns("license"), class = "function_interface",
+          shiny::h1("License"),
+          shiny::selectInput(
+            inputId = ns("license_selection"),
+            label = "Which License do you want?",
+            choices = c("CC0", "MIT", "Apache_v2", "GPL_v3"),
+            selected = "MIT",
+            width = "100%"
+          ),
+          shiny::textInput(
+            inputId = ns("license_names"),
+            label = "What's the name of the copyright holder? Separate multiple individuals with ;.",
+            width = "100%"
+          ),
+          shiny::actionButton(
+            inputId = ns("run_license"),
+            label = "Enable license",
+            icon = shiny::icon("arrow-circle-right"),
+            width = "100%"
+          )
+        )
       ),
       shiny::fillCol(
         shiny::div(
-          id = "license_help", class = "helpbox",
+          id = ns("license_help"), class = "helpbox",
           shiny::HTML(extract_help_as_html("usethis", "licenses"))
         )
       )
     )
   )
 
-}
-
-gui_usethis_use_..._license <- function() {
-  shiny::div(
-    id = "license", class = "function_interface",
-    shiny::h1("License"),
-    shiny::checkboxInput(
-      inputId = "license_use",
-      label = "Do you want to create a license?",
-      value = FALSE
-    ),
-    shiny::selectInput(
-      inputId = "license_selection",
-      label = "Which License do you want?",
-      choices = c("mit", "gpl3", "apl2", "cc0"),
-      selected = "mit"
-    ),
-    shiny::textInput(
-      inputId = "license_names",
-      label = "What's the name of the copyright holder? Separate multiple individuals with ;."
-    )
-  )
 }

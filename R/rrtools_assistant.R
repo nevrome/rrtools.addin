@@ -7,6 +7,8 @@ rrtools_assistant <- function() {
 
   server <- function(input, output, session) {
 
+    shiny::callModule(license_server, id = "license_general")
+    
     shiny::observeEvent(input$cancel, {
       shiny::stopApp()
     })

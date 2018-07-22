@@ -14,7 +14,7 @@ rrtools_assistant_ui <- function() {
         icon = shiny::icon("question")
       ),
       setup_ui(),
-      license_ui(),
+      license_ui("license_general"),
       versioning_ui(),
       cloud_ui(),
       readme_ui(),
