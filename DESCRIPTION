@@ -12,8 +12,10 @@ BugReports: https://github.com/nevrome/rrtools.addin/issues
 Suggests: testthat
 RoxygenNote: 6.0.1
 Imports: 
-	rrtools,
-	shiny,
 	miniUI,
+	rrtools,
+	rstudioapi,
+	shiny,
 	shinyFiles,
-	tools
+	tools,
+	usethis
