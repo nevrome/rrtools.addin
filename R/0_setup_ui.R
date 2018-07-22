@@ -18,7 +18,7 @@ setup_ui <- function() {
         )
       ),
       shiny::fillCol(
-        shiny::HTML("# usethis::use_git()")
+        shiny::HTML("# rrtools::use_compendium()")
       ),
       shiny::fillCol(
         shiny::div(
