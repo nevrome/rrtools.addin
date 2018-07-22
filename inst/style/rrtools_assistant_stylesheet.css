@@ -4,7 +4,7 @@
 }
 .explainbox_1 {
   position: relative;
-  height: 170px;
+  height: 185px;
   background: #b2ff91;
   border-radius: 15px;
   padding: 15px;
@@ -14,7 +14,7 @@
 }
 .explainbox_2 {
   position: relative;
-  height: 170px;
+  height: 185px;
   background: #b7daff;
   border-radius: 15px;
   padding: 15px;
@@ -28,13 +28,12 @@
 }
 .helpbox {
   overflow-y: auto;
-  height: 360px;
+  height: 380px;
   position: relative;
   background: #f2f2f2;
   border-radius: 15px;
   padding: 15px;
   margin-top: 10px;
-  margin-bottom: 0px;
   margin-right: 10px;
   margin-left: 10px;
 }
