@@ -1,5 +1,7 @@
-versioning_ui <- function() {
+versioning_ui <- function(id) {
 
+  ns <- shiny::NS(id)
+  
 	miniUI::miniTabPanel(
     title = "2. Versioning",
     icon = shiny::icon("code-fork"),
@@ -18,7 +20,19 @@ versioning_ui <- function() {
         )
       ),
       shiny::fillCol(
-        shiny::HTML("# usethis::use_git()")
+        shiny::div(
+          id = ns("versioning_outer"), class = "function_interface_outer",
+          shiny::div(
+            id = ns("versioning_inner"), class = "function_interface_inner",
+            shiny::h1("Version Control"),
+            shiny::actionButton(
+              inputId = ns("run_git"),
+              label = "Initialise your project as git repository",
+              icon = shiny::icon("arrow-circle-right"),
+              width = "100%"
+            )
+          )
+        )
       ),
       shiny::fillCol(
         shiny::div(

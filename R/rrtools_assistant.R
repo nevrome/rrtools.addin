@@ -45,7 +45,7 @@ rrtools_assistant <- function() {
         # other ui elements
         setup_ui("setup_general"),
         license_ui("license_general"),
-        versioning_ui(),
+        versioning_ui("versioning_general"),
         cloud_ui(),
         readme_ui(),
         file_structure_ui(),
@@ -61,6 +61,7 @@ rrtools_assistant <- function() {
 
     shiny::callModule(license_server, id = "license_general")
     shiny::callModule(setup_server, id = "setup_general")
+    shiny::callModule(versioning_server, id = "versioning_general")
     
     shiny::observeEvent(input$cancel, {
       shiny::stopApp()
