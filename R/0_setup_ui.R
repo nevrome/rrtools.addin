@@ -24,7 +24,7 @@ setup_ui <- function(id) {
           id = ns("setup_outer"), class = "function_interface_outer",
           shiny::div(
             id = ns("setup_inner"), class = "function_interface_inner",
-            shiny::h1("Compendium"),
+            shiny::h1("Create a research compendium"),
             shiny::strong("Select the parent directory of the new project:"),
             shinyFiles::shinyDirButton(
               id = ns("use_compendium_path"),
