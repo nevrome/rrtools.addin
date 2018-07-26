@@ -37,11 +37,24 @@ setup_server <- function(input, output, session) {
           fileConn
         )
         close(fileConn)
+        # prepare decisions
+        rstudio_param <- switch(
+          input$rstudio_selection,
+          Yes = TRUE,
+          No = FALSE
+        )
+        open_param <- switch(
+          input$open_selection,
+          Yes = TRUE,
+          No = FALSE
+        )
         # run use_compendium and close app
         rstudioapi::sendToConsole(
           paste0(
             "rrtools::use_compendium(", 
-              "path = \"", use_compendium_path_ready(), "\"",
+              "path = \"", use_compendium_path_ready(), "\",",
+              "rstudio = ", rstudio_param, ",",
+              "open = ", open_param,
             ")"
           )
         )
