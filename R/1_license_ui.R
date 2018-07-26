@@ -21,9 +21,9 @@ license_ui <- function(id) {
       ),
       shiny::fillCol(
         shiny::div(
-          id = ns("license_outer"), class = "function_interface_outer",
+          class = "function_interface_outer",
           shiny::div(
-            id = ns("license_inner"), class = "function_interface_inner",
+            class = "function_interface_inner",
             shiny::h1("License"),
             shiny::selectInput(
               inputId = ns("license_selection"),
@@ -48,7 +48,7 @@ license_ui <- function(id) {
       ),
       shiny::fillCol(
         shiny::div(
-          id = ns("license_help"), class = "helpbox",
+          class = "helpbox",
           shiny::HTML(extract_help_as_html("usethis", "licenses"))
         )
       )

@@ -21,9 +21,9 @@ versioning_ui <- function(id) {
       ),
       shiny::fillCol(
         shiny::div(
-          id = ns("versioning_outer"), class = "function_interface_outer",
+          class = "function_interface_outer",
           shiny::div(
-            id = ns("versioning_inner"), class = "function_interface_inner",
+            class = "function_interface_inner",
             shiny::h1("Version Control"),
             shiny::actionButton(
               inputId = ns("run_git"),
@@ -36,7 +36,7 @@ versioning_ui <- function(id) {
       ),
       shiny::fillCol(
         shiny::div(
-          id = "versioning_help", class = "helpbox",
+          class = "helpbox",
           shiny::HTML(extract_help_as_html("usethis", "use_git"))
         )
       )

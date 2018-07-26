@@ -21,9 +21,9 @@ setup_ui <- function(id) {
       ),
       shiny::fillCol(
         shiny::div(
-          id = ns("setup_outer"), class = "function_interface_outer",
+          class = "function_interface_outer",
           shiny::div(
-            id = ns("setup_inner"), class = "function_interface_inner",
+            class = "function_interface_inner",
             shiny::h1("Create a research compendium"),
             shiny::strong("Select the parent directory of the new project:"),
             shinyFiles::shinyDirButton(
@@ -63,7 +63,7 @@ setup_ui <- function(id) {
       ),
       shiny::fillCol(
         shiny::div(
-          id = "setup_help", class = "helpbox",
+          class = "helpbox",
           shiny::HTML(extract_help_as_html("rrtools", "use_compendium"))
         )
       )
