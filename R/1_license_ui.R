@@ -21,25 +21,28 @@ license_ui <- function(id) {
       ),
       shiny::fillCol(
         shiny::div(
-          id = ns("license"), class = "function_interface",
-          shiny::h1("License"),
-          shiny::selectInput(
-            inputId = ns("license_selection"),
-            label = "Which License do you want?",
-            choices = c("CC0", "MIT", "Apache_v2", "GPL_v3"),
-            selected = "MIT",
-            width = "100%"
-          ),
-          shiny::textInput(
-            inputId = ns("license_names"),
-            label = "What's the name of the copyright holder? Separate multiple individuals with ;.",
-            width = "100%"
-          ),
-          shiny::actionButton(
-            inputId = ns("run_license"),
-            label = "Enable license",
-            icon = shiny::icon("arrow-circle-right"),
-            width = "100%"
+          id = ns("license_outer"), class = "function_interface_outer",
+          shiny::div(
+            id = ns("license_inner"), class = "function_interface_inner",
+            shiny::h1("License"),
+            shiny::selectInput(
+              inputId = ns("license_selection"),
+              label = "Which License do you want?",
+              choices = c("CC0", "MIT", "Apache_v2", "GPL_v3"),
+              selected = "MIT",
+              width = "100%"
+            ),
+            shiny::textInput(
+              inputId = ns("license_names"),
+              label = "What's the name of the copyright holder? Separate multiple individuals with ;.",
+              width = "100%"
+            ),
+            shiny::actionButton(
+              inputId = ns("run_license"),
+              label = "Enable license",
+              icon = shiny::icon("arrow-circle-right"),
+              width = "100%"
+            )
           )
         )
       ),

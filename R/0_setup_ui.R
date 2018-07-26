@@ -21,42 +21,44 @@ setup_ui <- function(id) {
       ),
       shiny::fillCol(
         shiny::div(
-          id = ns("license"), class = "function_interface",
-          shiny::h1("Compendium"),
-          shiny::strong("Select the parent directory of the new project:"),
-          shinyFiles::shinyDirButton(
-            id = ns("use_compendium_path"),
-            label = "Choose directory",
-            title = "Directory selection"
-          ),
-          shiny::textInput(
-            inputId = ns("use_compendium_project_name"),
-            label = "Set a project name:",
-            width = "100%"
-          ),
-          shiny::strong("The new project will be created here:"),
-          shiny::htmlOutput(ns("use_compendium_path_ready")),
-          shiny::selectInput(
-            inputId = ns("rstudio_selection"),
-            label = "Should an RStudio project file be created?",
-            choices = c("Yes", "No"),
-            selected = "Yes",
-            width = "100%"
-          ),
-          shiny::selectInput(
-            inputId = ns("open_selection"),
-            label = "Should a new RStudio Session be started directly?",
-            choices = c("Yes", "No"),
-            selected = "Yes",
-            width = "100%"
-          ),
-          shiny::actionButton(
-            inputId = ns("run_use_compendium"),
-            label = "Create new project",
-            icon = shiny::icon("arrow-circle-right"),
-            width = "100%"
+          id = ns("setup_outer"), class = "function_interface_outer",
+          shiny::div(
+            id = ns("setup_inner"), class = "function_interface_inner",
+            shiny::h1("Compendium"),
+            shiny::strong("Select the parent directory of the new project:"),
+            shinyFiles::shinyDirButton(
+              id = ns("use_compendium_path"),
+              label = "Choose directory",
+              title = "Directory selection"
+            ),
+            shiny::textInput(
+              inputId = ns("use_compendium_project_name"),
+              label = "Set a project name:",
+              width = "100%"
+            ),
+            shiny::strong("The new project will be created here:"),
+            shiny::htmlOutput(ns("use_compendium_path_ready")),
+            shiny::selectInput(
+              inputId = ns("rstudio_selection"),
+              label = "Should an RStudio project file be created?",
+              choices = c("Yes", "No"),
+              selected = "Yes",
+              width = "100%"
+            ),
+            shiny::selectInput(
+              inputId = ns("open_selection"),
+              label = "Should a new RStudio Session be started directly?",
+              choices = c("Yes", "No"),
+              selected = "Yes",
+              width = "100%"
+            ),
+            shiny::actionButton(
+              inputId = ns("run_use_compendium"),
+              label = "Create new project",
+              icon = shiny::icon("arrow-circle-right"),
+              width = "100%"
+            )
           )
-          
         )
       ),
       shiny::fillCol(

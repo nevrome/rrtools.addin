@@ -31,8 +31,9 @@ rrtools_assistant <- function() {
               shiny::div(
                 class = "imagebox",
                 shiny::img(
-                  src = "https://i.pinimg.com/originals/39/a3/d5/39a3d528f9c54ad894d1a027bf69e43d.jpg"),
+                  src = "https://s-media-cache-ak0.pinimg.com/originals/c5/67/d4/c567d4b7e23d54fa750baacab934cd1b.jpg",
                   align = "center"
+                )
               )
             )
           )
