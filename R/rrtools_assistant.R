@@ -26,7 +26,7 @@ rrtools_assistant <- function() {
             flex = c(1, 2),
             shiny::fillCol(
               shiny::div(
-                class = "helpbox",
+                class = "overviewpagebox",
                 shiny::h4("What's this addin about"),
                 shiny::p("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing elit duis tristique sollicitudin nibh. Libero id faucibus nisl tincidunt eget. Praesent semper feugiat nibh sed.")
               )

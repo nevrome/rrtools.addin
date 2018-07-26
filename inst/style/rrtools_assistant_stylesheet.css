@@ -38,6 +38,17 @@
   position: relative;
   overflow-y: auto;
 }
+.overviewpagebox {
+  overflow-y: auto;
+  height: 360px;
+  position: relative;
+  background: #f2f2f2;
+  border-radius: 15px;
+  padding: 15px;
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
 .helpbox {
   overflow-y: auto;
   height: 360px;
