@@ -1,4 +1,8 @@
-#' rrtools Rstudio Addin 2
+#' rrtools RStudio Addin
+#' 
+#' This addin is a simplified interface to Ben Marwicks's rrtools package.
+#' For more documentation please check out the Addin itself and the rrtools
+#' README (\url{https://github.com/benmarwick/rrtools}).
 #'
 #' @export
 rrtools_assistant <- function() {

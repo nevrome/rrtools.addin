@@ -2,10 +2,12 @@
 % Please edit documentation in R/rrtools_assistant.R
 \name{rrtools_assistant}
 \alias{rrtools_assistant}
-\title{rrtools Rstudio Addin 2}
+\title{rrtools RStudio Addin}
 \usage{
 rrtools_assistant()
 }
 \description{
-rrtools Rstudio Addin 2
+This addin is a simplified interface to Ben Marwicks's rrtools package.
+For more documentation please check out the Addin itself and the rrtools
+README (\url{https://github.com/benmarwick/rrtools}).
 }
