@@ -38,7 +38,7 @@ rrtools_assistant <- function() {
           )
         ),
         # other ui elements
-        setup_ui(),
+        setup_ui("setup_general"),
         license_ui("license_general"),
         versioning_ui(),
         cloud_ui(),

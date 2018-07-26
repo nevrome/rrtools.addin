@@ -1,4 +1,6 @@
-setup_ui <- function() {
+setup_ui <- function(id) {
+  
+  ns <- shiny::NS(id)
   
   miniUI::miniTabPanel(
     title = "0. Setup",
@@ -18,7 +20,31 @@ setup_ui <- function() {
         )
       ),
       shiny::fillCol(
-        shiny::HTML("# rrtools::use_compendium()")
+        shiny::div(
+          id = ns("license"), class = "function_interface",
+          shiny::h1("Compendium"),
+          shinyFiles::shinyDirButton(
+            id = "use_compendium_path",
+            label = "Select the parent directory of the new project",
+            title = "Directory selection"
+          ),
+          shiny::textInput(
+            inputId = "use_compendium_project_name",
+            label = "Set a project name",
+            width = "100%"
+          ),
+          shiny::h4("3. The new project will be created here:"),
+          shiny::htmlOutput("use_compendium_path_ready"),
+          shiny::h4("The following code will be used to do this:"),
+          shiny::htmlOutput("use_compendium_call"),
+          shiny::actionButton(
+            inputId = ns("run_setup"),
+            label = "Create new project",
+            icon = shiny::icon("arrow-circle-right"),
+            width = "100%"
+          )
+          
+        )
       ),
       shiny::fillCol(
         shiny::div(
