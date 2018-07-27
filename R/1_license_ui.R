@@ -16,7 +16,13 @@ license_ui <- function(id) {
         shiny::div(
           class = "explainbox_2",
           shiny::h4("The function", shiny::strong("usethis::use_..._license")),
-          shiny::p("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing elit duis tristique sollicitudin nibh. Libero id faucibus nisl tincidunt eget. Praesent semper feugiat nibh sed.")
+          shiny::HTML("
+            <ol>
+              <li>Configuring DESCRIPTION file to include new License</li>
+              <li>Writing License files</li>
+              <li>Configuring R package files to ignore License files</li>
+            </ol>
+          ")
         )
       ),
       shiny::fillCol(
