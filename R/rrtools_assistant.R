@@ -7,6 +7,8 @@
 #' @export
 rrtools_assistant <- function() {
 
+  shiny::addResourcePath("image", system.file("image", package = "rrtools.addin"))
+  
   #### ui ####
   ui <- function() {
     miniUI::miniPage(
@@ -35,7 +37,7 @@ rrtools_assistant <- function() {
               shiny::div(
                 class = "imagebox",
                 shiny::img(
-                  src = "https://s-media-cache-ak0.pinimg.com/originals/c5/67/d4/c567d4b7e23d54fa750baacab934cd1b.jpg",
+                  src = "/image/overview.png",
                   align = "center"
                 )
               )
