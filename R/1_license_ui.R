@@ -11,7 +11,12 @@ license_ui <- function(id) {
         shiny::div(
           class = "explainbox_1",
           shiny::h4("What is a license and why should I care?"),
-          shiny::p("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing elit duis tristique sollicitudin nibh. Libero id faucibus nisl tincidunt eget. Praesent semper feugiat nibh sed.")
+          shiny::HTML("<p> 
+            A research compendium usually contains code and data. If you provide your intellectual property
+            in an open and reproducible form, you have to assume that others will use it for their purposes.
+            To codify what kind of things they are allowed to do you need a 
+            <a href=\"https://choosealicense.com\" rel=\"nofollow\">project license</a>. 
+          </p>")
         ),
         shiny::div(
           class = "explainbox_2",
