@@ -29,8 +29,26 @@ rrtools_assistant <- function() {
             shiny::fillCol(
               shiny::div(
                 class = "overviewpagebox",
-                shiny::h4("What's this addin about"),
-                shiny::p("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing elit duis tristique sollicitudin nibh. Libero id faucibus nisl tincidunt eget. Praesent semper feugiat nibh sed.")
+                shiny::h4("What is this about?"),
+                shiny::HTML("
+                  <p> This RStudio Addin is a graphical interface to Ben Marwick's 
+                  <a href=\"https://github.com/benmarwick/rrtools\" rel=\"nofollow\">rrtools package</a>. 
+                  rrtools provides instructions, templates, and functions for making a basic compendium 
+                  suitable for writing reproducible research with R. </p>
+                "),
+                shiny::HTML("
+                  <p> The approach is based generally on 
+                  <a href=\"https://www.practicereproducibleresearch.org\" rel=\"nofollow\">Kitzes et al. (2017)</a>, 
+                  and more specifically on 
+                  <a href=\"https://doi.org/10.1007/s10816-015-9272-9\" rel=\"nofollow\">Marwick (2017)</a>, 
+                  <a href=\"https://doi.org/10.7287/peerj.preprints.3192v1\" rel=\"nofollow\">Marwick et al. (2017)</a>, and 
+                  <a href=\"https://docs.google.com/document/d/1LzZKS44y4OEJa4Azg5reGToNAZL0e0HSUwxamNY7E-Y/edit#\" rel=\"nofollow\">Wickham's (2017)</a> 
+                  work using the R package structure as the basis for a research compendium. </p>
+                "),
+                shiny::HTML("
+                  <p> This Addin allows to use and understand the most important rrtools functions, their context and
+                  their main options. </p> 
+                ")
               )
             ),
             shiny::fillCol(
