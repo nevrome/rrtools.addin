@@ -17,7 +17,7 @@ rrtools_assistant <- function() {
       ),
       miniUI::gadgetTitleBar(
         "rrtools Configuration Assistant",
-        right = NULL
+        right = miniUI::miniTitleBarButton("help_button", "Ask for help or report a bug")
       ),
       # overview page
       miniUI::miniTabstripPanel(
@@ -82,6 +82,10 @@ rrtools_assistant <- function() {
     shiny::callModule(license_server, id = "license_general")
     shiny::callModule(setup_server, id = "setup_general")
     shiny::callModule(versioning_server, id = "versioning_general")
+    
+    shiny::observeEvent(input$help_button, {
+      utils::browseURL("https://github.com/nevrome/rrtools.addin/issues")
+    })
     
     shiny::observeEvent(input$cancel, {
       shiny::stopApp()
