@@ -10,8 +10,14 @@ setup_ui <- function(id) {
       shiny::fillCol(
         shiny::div(
           class = "explainbox_1",
-          shiny::h4("New repo..."),
-          shiny::p("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing elit duis tristique sollicitudin nibh. Libero id faucibus nisl tincidunt eget. Praesent semper feugiat nibh sed.")
+          shiny::h4("A new project!"),
+          shiny::HTML("<p> 
+            Each reproducible research project lives in an own directory on your computer.
+            This directory needs some special files and subfolders to work as an
+            <a href=\"http://r-pkgs.had.co.nz/package.html\" rel=\"nofollow\">R package</a>.
+            The first step in the creation of a research compendium is to create and
+            configure all of this.
+          </p>")
         ),
         shiny::div(
           class = "explainbox_2",
