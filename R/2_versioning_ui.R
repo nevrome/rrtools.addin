@@ -11,7 +11,13 @@ versioning_ui <- function(id) {
         shiny::div(
           class = "explainbox_1",
           shiny::h4("Version Control with git?"),
-          shiny::p("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing elit duis tristique sollicitudin nibh. Libero id faucibus nisl tincidunt eget. Praesent semper feugiat nibh sed.")
+          shiny::HTML("<p> 
+            Research is an incremental process. You create a hypothesis, test it, keep it or abandon it.
+            Truly reproducible work should try to keep track. Version control software like 
+            <a href=\"https://git-scm.com\" rel=\"nofollow\">Git</a> is the best way to do this.
+            If you want to use it, you'll have to take 
+            <a href=\"https://jennybc.github.io/2014-05-12-ubc/ubc-r/session03_git.html#learngit\" rel=\"nofollow\">a deeper look</a>.
+          </p>")
         ),
         shiny::div(
           class = "explainbox_2",
