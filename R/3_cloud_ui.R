@@ -37,10 +37,10 @@ cloud_ui <- function(id) {
           class = "function_interface_outer",
           shiny::div(
             class = "function_interface_inner",
-            shiny::h1("Git Cloud Plaform: Github"),
+            shiny::h1("Git Cloud Plaform: GitHub"),
             shiny::textInput(
               inputId = ns("github_auth_token"),
-              label = "Your personal github access token:",
+              label = "Your personal GitHub access token:",
               width = "100%"
             ) %>%
               bsplus::shinyInput_label_embed(
@@ -48,18 +48,20 @@ cloud_ui <- function(id) {
                   bsplus::bs_embed_popover(
                     title = "How to get a token?", 
                     content = "
-                      To use Github you have to 
+                      To use GitHub you have to 
                       <a href=\"https://github.com/join\" rel=\"nofollow\">create an account</a>.
                       Then just follow the instructions 
                       <a href=\"https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line\" rel=\"nofollow\">here</a> 
                       on how to create an access token.
+                      If you leave this field empty, rrtools checks if there's already
+                      an access token in your system.
                     ",
                     placement = "left",
                     html = "true"
                   )
               ),
             shiny::selectInput(
-              inputId = ns("rstudio_selection"),
+              inputId = ns("private_selection"),
               label = "Should your repository be private?",
               choices = c("Yes", "No"),
               selected = "No",
@@ -73,7 +75,7 @@ cloud_ui <- function(id) {
                       A public repository can be seen (but not edited) by everybody.
                       A private one is only visible for you and the collaborators
                       you select. Having private repositories is a premium feature
-                      of github and costs money. But maybe you are eligible for a free
+                      of GitHub and costs money. But maybe you are eligible for a free
                       <a href=\"https://education.github.com/\" rel=\"nofollow\">educational account</a>? 
                     ",
                     placement = "left",
@@ -82,7 +84,7 @@ cloud_ui <- function(id) {
               ),
             shiny::actionButton(
               inputId = ns("run_github"),
-              label = "",
+              label = "Connect your local repo with GitHub",
               icon = shiny::icon("arrow-circle-right"),
               width = "100%"
             )
