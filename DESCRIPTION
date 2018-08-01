@@ -13,10 +13,11 @@ Suggests: testthat
 RoxygenNote: 6.0.1
 Imports:
   bsplus,
-	miniUI,
-	rrtools,
-	rstudioapi,
-	shiny,
-	shinyFiles,
-	tools,
-	usethis
+  magrittr,
+  miniUI,
+  rrtools,
+  rstudioapi,
+  shiny,
+  shinyFiles,
+  tools,
+  usethis
