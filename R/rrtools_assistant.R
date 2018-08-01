@@ -13,7 +13,9 @@ rrtools_assistant <- function() {
   ui <- function() {
     miniUI::miniPage(
       shiny::tags$head(
-        shiny::includeCSS(system.file("style/rrtools_assistant_stylesheet.css", package = "rrtools.addin"))
+        shiny::includeCSS(system.file("style/rrtools_assistant_stylesheet.css", package = "rrtools.addin")),
+        # activate bs popovers
+        bsplus::use_bs_popover()
       ),
       miniUI::gadgetTitleBar(
         "rrtools Configuration Assistant",
@@ -66,7 +68,7 @@ rrtools_assistant <- function() {
         setup_ui("setup_general"),
         license_ui("license_general"),
         versioning_ui("versioning_general"),
-        cloud_ui(),
+        cloud_ui("cloud_general"),
         readme_ui(),
         file_structure_ui(),
         virtualisation_ui(),
@@ -82,6 +84,7 @@ rrtools_assistant <- function() {
     shiny::callModule(license_server, id = "license_general")
     shiny::callModule(setup_server, id = "setup_general")
     shiny::callModule(versioning_server, id = "versioning_general")
+    shiny::callModule(cloud_server, id = "cloud_general")
     
     shiny::observeEvent(input$help_button, {
       utils::browseURL("https://github.com/nevrome/rrtools.addin/issues")
