@@ -58,6 +58,28 @@ cloud_ui <- function(id) {
                     html = "true"
                   )
               ),
+            shiny::selectInput(
+              inputId = ns("rstudio_selection"),
+              label = "Should your repository be private?",
+              choices = c("Yes", "No"),
+              selected = "No",
+              width = "100%"
+            ) %>%
+              bsplus::shinyInput_label_embed(
+                bsplus::shiny_iconlink() %>%
+                  bsplus::bs_embed_popover(
+                    title = "What's the difference?", 
+                    content = "
+                      A public repository can be seen (but not edited) by everybody.
+                      A private one is only visible for you and the collaborators
+                      you select. Having private repositories is a premium feature
+                      of github and costs money. But maybe you are eligible for a free
+                      <a href=\"https://education.github.com/\" rel=\"nofollow\">educational account</a>? 
+                    ",
+                    placement = "left",
+                    html = "true"
+                  )
+              ),
             shiny::actionButton(
               inputId = ns("run_github"),
               label = "",
