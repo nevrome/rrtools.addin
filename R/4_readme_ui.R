@@ -1,5 +1,7 @@
-readme_ui <- function() {
+readme_ui <- function(id) {
 
+  ns <- shiny::NS(id)
+  
 	miniUI::miniTabPanel(
 		title = "4. Readme",
 		icon = shiny::icon("file-text"),
@@ -18,7 +20,19 @@ readme_ui <- function() {
 		    )
 		  ),
 		  shiny::fillCol(
-		    shiny::HTML("# rrtools::use_readme_rmd()")
+		    shiny::div(
+		      class = "function_interface_outer",
+		      shiny::div(
+		        class = "function_interface_inner",
+		        shiny::h1("README.rmd and README.md"),
+		        shiny::actionButton(
+		          inputId = ns("run_readme"),
+		          label = "Add a README file to your project",
+		          icon = shiny::icon("arrow-circle-right"),
+		          width = "100%"
+		        )
+		      )
+		    )
 		  ),
 		  shiny::fillCol(
 		    shiny::div(

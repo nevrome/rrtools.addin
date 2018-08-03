@@ -71,7 +71,7 @@ rrtools_assistant <- function() {
         license_ui("license_general"),
         versioning_ui("versioning_general"),
         cloud_ui("cloud_general"),
-        readme_ui(),
+        readme_ui("readme_general"),
         file_structure_ui(),
         virtualisation_ui(),
         ci_cd_ui(),
@@ -87,6 +87,7 @@ rrtools_assistant <- function() {
     shiny::callModule(setup_server, id = "setup_general")
     shiny::callModule(versioning_server, id = "versioning_general")
     shiny::callModule(cloud_server, id = "cloud_general")
+    shiny::callModule(readme_server, id = "readme_general")
     
     shiny::observeEvent(input$help_button, {
       utils::browseURL("https://github.com/nevrome/rrtools.addin/issues")
