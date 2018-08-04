@@ -29,7 +29,7 @@ readme_ui <- function(id) {
 		          inputId = ns("run_readme"),
 		          label = "Add a README file to your project",
 		          icon = shiny::icon("arrow-circle-right"),
-		          width = "100%"
+		          width = "95%"
 		        )
 		      )
 		    )

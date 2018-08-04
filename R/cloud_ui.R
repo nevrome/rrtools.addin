@@ -41,7 +41,7 @@ cloud_ui <- function(id) {
             shiny::textInput(
               inputId = ns("github_auth_token"),
               label = "Your personal GitHub access token:",
-              width = "100%"
+              width = "95%"
             ) %>%
               bsplus::shinyInput_label_embed(
                 bsplus::shiny_iconlink() %>%
@@ -65,7 +65,7 @@ cloud_ui <- function(id) {
               label = "Should your repository be private?",
               choices = c("Yes", "No"),
               selected = "No",
-              width = "100%"
+              width = "95%"
             ) %>%
               bsplus::shinyInput_label_embed(
                 bsplus::shiny_iconlink() %>%
@@ -86,7 +86,7 @@ cloud_ui <- function(id) {
               inputId = ns("run_github"),
               label = "Connect your local repo with GitHub",
               icon = shiny::icon("arrow-circle-right"),
-              width = "100%"
+              width = "95%"
             )
           )
         )

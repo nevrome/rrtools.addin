@@ -41,18 +41,18 @@ license_ui <- function(id) {
               label = "Which License do you want?",
               choices = c("CC0", "MIT", "Apache_v2", "GPL_v3"),
               selected = "MIT",
-              width = "100%"
+              width = "95%"
             ),
             shiny::textInput(
               inputId = ns("license_names"),
               label = "What's the name of the copyright holder? Separate multiple individuals with ;.",
-              width = "100%"
+              width = "95%"
             ),
             shiny::actionButton(
               inputId = ns("run_license"),
               label = "Enable license",
               icon = shiny::icon("arrow-circle-right"),
-              width = "100%"
+              width = "95%"
             )
           )
         )

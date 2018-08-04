@@ -42,7 +42,7 @@ versioning_ui <- function(id) {
               inputId = ns("run_git"),
               label = "Initialise your project as git repository",
               icon = shiny::icon("arrow-circle-right"),
-              width = "100%"
+              width = "95%"
             )
           )
         )

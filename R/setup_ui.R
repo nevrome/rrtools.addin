@@ -47,7 +47,7 @@ setup_ui <- function(id) {
             shiny::textInput(
               inputId = ns("use_compendium_project_name"),
               label = "Set a project name:",
-              width = "100%"
+              width = "95%"
             ),
             shiny::strong("The new project will be created here:"),
             shiny::htmlOutput(ns("use_compendium_path_ready")),
@@ -56,20 +56,20 @@ setup_ui <- function(id) {
               label = "Should an RStudio project file be created?",
               choices = c("Yes", "No"),
               selected = "Yes",
-              width = "100%"
+              width = "95%"
             ),
             shiny::selectInput(
               inputId = ns("open_selection"),
               label = "Should a new RStudio Session be started directly?",
               choices = c("Yes", "No"),
               selected = "Yes",
-              width = "100%"
+              width = "95%"
             ),
             shiny::actionButton(
               inputId = ns("run_use_compendium"),
               label = "Create new project",
               icon = shiny::icon("arrow-circle-right"),
-              width = "100%"
+              width = "95%"
             )
           )
         )
