@@ -20,7 +20,73 @@ file_structure_ui <- function(id) {
         )
       ),
       shiny::fillCol(
-        shiny::HTML("# rrtools::use_analysis()")
+        shiny::div(
+          class = "function_interface_outer",
+          shiny::div(
+            class = "function_interface_inner",
+            shiny::h1("Analysis directory"),
+            shiny::selectInput(
+              inputId = ns("location_selection"),
+              label = "Where should the analysis directory be created?",
+              choices = c("top-level directory", "inst/ directory", "vignettes/ directory"),
+              selected = "top-level directory",
+              width = "100%"
+            ) %>%
+              bsplus::shinyInput_label_embed(
+                bsplus::shiny_iconlink() %>%
+                  bsplus::bs_embed_popover(
+                    title = "What's the difference?", 
+                    content = "
+                      test
+                    ",
+                    placement = "left",
+                    html = "true"
+                  )
+              ),
+            shiny::selectInput(
+              inputId = ns("template_selection"),
+              label = "Which template should be used for the creation of the main analysis document?",
+              choices = c("paper.Rmd"),
+              selected = "paper.Rmd",
+              width = "100%"
+            ) %>%
+              bsplus::shinyInput_label_embed(
+                bsplus::shiny_iconlink() %>%
+                  bsplus::bs_embed_popover(
+                    title = "What's the difference?", 
+                    content = "
+                      test
+                    ",
+                    placement = "left",
+                    html = "true"
+                  )
+              ),
+            shiny::selectInput(
+              inputId = ns("data_in_git_selection"),
+              label = "Should git track the files in the data directory?",
+              choices = c("Yes", "No"),
+              selected = "Yes",
+              width = "100%"
+            ) %>%
+              bsplus::shinyInput_label_embed(
+                bsplus::shiny_iconlink() %>%
+                  bsplus::bs_embed_popover(
+                    title = "What's the difference?", 
+                    content = "
+                      test
+                    ",
+                    placement = "left",
+                    html = "true"
+                  )
+              ),
+            shiny::actionButton(
+              inputId = ns("run"),
+              label = "Create the analysis directory",
+              icon = shiny::icon("arrow-circle-right"),
+              width = "100%"
+            )
+          )
+        )
       ),
       shiny::fillCol(
         shiny::div(
