@@ -22,15 +22,13 @@ file_structure_server <- function(input, output, session) {
     
     rstudioapi::sendToConsole(
       paste0(
-        "rrtools::use_github(",
-        "location = ", location_param, ",",
-        "template = ", template_param, ",",
+        "rrtools::use_analysis(",
+        "location = ", "\"", location_param, "\"", ", ",
+        "template = ", "\"", template_param, "\"", ", ",
         "data_in_git = ", data_in_git_param, 
         ")"
       )
     )
-    
-    rstudioapi::sendToConsole("")
     
     shiny::stopApp()
     
