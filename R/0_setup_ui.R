@@ -3,7 +3,7 @@ setup_ui <- function(id) {
   ns <- shiny::NS(id)
   
   miniUI::miniTabPanel(
-    title = "0. Setup",
+    title = "Setup",
     icon = shiny::icon("globe"),
     shiny::fillRow(
       flex = c(1, 1, 1),

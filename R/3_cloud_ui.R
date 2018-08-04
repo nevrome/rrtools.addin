@@ -3,7 +3,7 @@ cloud_ui <- function(id) {
   ns <- shiny::NS(id)
   
 	miniUI::miniTabPanel(
-    title = "3. Cloud",
+    title = "Cloud",
     icon = shiny::icon("cloud"),
     shiny::fillRow(
       flex = c(1, 1, 1),

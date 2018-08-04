@@ -3,7 +3,7 @@ ci_cd_ui <- function(id) {
   ns <- shiny::NS(id)
   
   miniUI::miniTabPanel(
-    title = "7. CI/CD",
+    title = "CI/CD",
     icon = shiny::icon("industry"),
     shiny::fillRow(
       flex = c(1, 1, 1),

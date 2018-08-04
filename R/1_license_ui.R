@@ -3,7 +3,7 @@ license_ui <- function(id) {
   ns <- shiny::NS(id)
   
 	miniUI::miniTabPanel(
-    title = "1. License",
+    title = "License",
     icon = shiny::icon("handshake-o"),
     shiny::fillRow(
       flex = c(1, 1, 1),

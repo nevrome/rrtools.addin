@@ -3,7 +3,7 @@ virtualisation_ui <- function(id) {
   ns <- shiny::NS(id)
   
 	miniUI::miniTabPanel(
-    title = "6. Virtualisation",
+    title = "Virtualisation",
     icon = shiny::icon("desktop"),
     shiny::fillRow(
       flex = c(1, 1, 1),

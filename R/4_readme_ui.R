@@ -3,7 +3,7 @@ readme_ui <- function(id) {
   ns <- shiny::NS(id)
   
 	miniUI::miniTabPanel(
-		title = "4. Readme",
+		title = "Readme",
 		icon = shiny::icon("file-text"),
 		shiny::fillRow(
 		  flex = c(1, 1, 1),

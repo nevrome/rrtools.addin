@@ -3,7 +3,7 @@ tests_ui <- function(id) {
   ns <- shiny::NS(id)
   
 	miniUI::miniTabPanel(
-    title = "8. Tests",
+    title = "Tests",
     icon = shiny::icon("bolt"),
     shiny::fillRow(
       flex = c(1, 1, 1),

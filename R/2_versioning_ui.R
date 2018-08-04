@@ -3,7 +3,7 @@ versioning_ui <- function(id) {
   ns <- shiny::NS(id)
   
 	miniUI::miniTabPanel(
-    title = "2. Versioning",
+    title = "Versioning",
     icon = shiny::icon("code-fork"),
     shiny::fillRow(
       flex = c(1, 1, 1),
