@@ -21,7 +21,8 @@ rrtools_assistant <- function() {
       ),
       miniUI::gadgetTitleBar(
         "rrtools Configuration Assistant",
-        right = miniUI::miniTitleBarButton("help_button", "Ask for help or report a bug")
+        left = miniUI::miniTitleBarButton("help_button", "Ask for help or report a bug"),
+        right = miniUI::miniTitleBarCancelButton()
       ),
       # overview page
       miniUI::miniTabstripPanel(
