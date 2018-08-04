@@ -20,7 +20,19 @@ tests_ui <- function(id) {
         )
       ),
       shiny::fillCol(
-        shiny::HTML("# usethis::use_testthat()")
+        shiny::div(
+          class = "function_interface_outer",
+          shiny::div(
+            class = "function_interface_inner",
+            shiny::h1("Automatic tests"),
+            shiny::actionButton(
+              inputId = ns("run"),
+              label = "Create testthat environment",
+              icon = shiny::icon("arrow-circle-right"),
+              width = "95%"
+            )
+          )
+        )
       ),
       shiny::fillCol(
         shiny::div(

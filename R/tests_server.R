@@ -1,8 +1,8 @@
 tests_server <- function(input, output, session) {
   
-  shiny::observeEvent(input$run_test, {
+  shiny::observeEvent(input$run, {
     
-    rstudioapi::sendToConsole("")
+    rstudioapi::sendToConsole("usethis::use_testthat()")
     
     shiny::stopApp()
     
