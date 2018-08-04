@@ -20,7 +20,37 @@ virtualisation_ui <- function(id) {
         )
       ),
       shiny::fillCol(
-        shiny::HTML("# rrtools::use_dockerfile()")
+        shiny::div(
+          class = "function_interface_outer",
+          shiny::div(
+            class = "function_interface_inner",
+            shiny::h1("Docker"),
+            shiny::selectInput(
+              inputId = ns("rocker_selection"),
+              label = "On which rocker image should this container be based?",
+              choices = c("rocker/rstudio", "rocker/tidyverse", "rocker/verse", "rocker/geospatial"),
+              selected = "rocker/verse",
+              width = "95%"
+            ) %>%
+              bsplus::shinyInput_label_embed(
+                bsplus::shiny_iconlink() %>%
+                  bsplus::bs_embed_popover(
+                    title = "What's the difference?", 
+                    content = "
+                    test
+                    ",
+                    placement = "left",
+                    html = "true"
+                  )
+              ),
+            shiny::actionButton(
+              inputId = ns("run"),
+              label = "Add a Dockerfile",
+              icon = shiny::icon("arrow-circle-right"),
+              width = "95%"
+            )
+          )
+        )
       ),
       shiny::fillCol(
         shiny::div(
