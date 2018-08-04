@@ -20,7 +20,37 @@ ci_cd_ui <- function(id) {
         )
       ),
       shiny::fillCol(
-        shiny::HTML("# rrtools::use_travis()")
+        shiny::div(
+          class = "function_interface_outer",
+          shiny::div(
+            class = "function_interface_inner",
+            shiny::h1("Travis"),
+            shiny::selectInput(
+              inputId = ns("docker_selection"),
+              label = "With Docker?",
+              choices = c("Yes", "No"),
+              selected = "Yes",
+              width = "95%"
+            ) %>%
+              bsplus::shinyInput_label_embed(
+                bsplus::shiny_iconlink() %>%
+                  bsplus::bs_embed_popover(
+                    title = "What's the difference?", 
+                    content = "
+                    test
+                    ",
+                    placement = "left",
+                    html = "true"
+                  )
+              ),
+            shiny::actionButton(
+              inputId = ns("run"),
+              label = "Add a travis config file",
+              icon = shiny::icon("arrow-circle-right"),
+              width = "95%"
+            )
+          )
+        )
       ),
       shiny::fillCol(
         shiny::div(
