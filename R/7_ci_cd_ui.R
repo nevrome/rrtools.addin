@@ -1,5 +1,7 @@
-ci_cd_ui <- function() {
+ci_cd_ui <- function(id) {
 
+  ns <- shiny::NS(id)
+  
   miniUI::miniTabPanel(
     title = "7. CI/CD",
     icon = shiny::icon("industry"),

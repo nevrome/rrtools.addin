@@ -1,5 +1,7 @@
-virtualisation_ui <- function() {
+virtualisation_ui <- function(id) {
 
+  ns <- shiny::NS(id)
+  
 	miniUI::miniTabPanel(
     title = "6. Virtualisation",
     icon = shiny::icon("desktop"),

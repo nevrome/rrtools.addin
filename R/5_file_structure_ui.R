@@ -1,5 +1,7 @@
-file_structure_ui <- function() {
+file_structure_ui <- function(id) {
 
+  ns <- shiny::NS(id)
+  
   miniUI::miniTabPanel(
     title = "5. File structure",
     icon = shiny::icon("folder"),

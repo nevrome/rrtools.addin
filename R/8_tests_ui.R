@@ -1,5 +1,7 @@
-tests_ui <- function() {
+tests_ui <- function(id) {
  	
+  ns <- shiny::NS(id)
+  
 	miniUI::miniTabPanel(
     title = "8. Tests",
     icon = shiny::icon("bolt"),
