@@ -42,29 +42,78 @@ setup_ui <- function(id) {
             shinyFiles::shinyDirButton(
               id = ns("use_compendium_path"),
               label = "Choose directory",
-              title = "Directory selection"
+              title = "Directory selection",
+              icon = shiny::icon("folder")
             ),
             shiny::textInput(
               inputId = ns("use_compendium_project_name"),
               label = "Set a project name:",
               width = "95%"
-            ),
+            ) %>%
+              bsplus::shinyInput_label_embed(
+                bsplus::shiny_iconlink() %>%
+                  bsplus::bs_embed_popover(
+                    title = "How to name a project?", 
+                    content = "
+                      The name of your project has to be a good representation 
+                      of its content and also has to fulfil some technical 
+                      requirements. See 
+                      <a href=\"http://r-pkgs.had.co.nz/package.html#naming\" rel=\"nofollow\">Hadley Wickhams helpful hints</a>
+                      for advice. Jim Hesters R package 
+                      <a href=\"https://github.com/ropenscilabs/available\" rel=\"nofollow\">available</a>
+                      makes it easy to check if your name is already in use 
+                      somewhere or if it has some unintended meanings.
+                    ",
+                    placement = "left",
+                    html = "true"
+                  )
+              ),
             shiny::strong("The new project will be created here:"),
             shiny::htmlOutput(ns("use_compendium_path_ready")),
             shiny::selectInput(
               inputId = ns("rstudio_selection"),
-              label = "Should an RStudio project file be created?",
+              label = "Should an RStudio Project file be created?",
               choices = c("Yes", "No"),
               selected = "Yes",
               width = "95%"
-            ),
+            ) %>%
+              bsplus::shinyInput_label_embed(
+                bsplus::shiny_iconlink() %>%
+                  bsplus::bs_embed_popover(
+                    title = "What's an RStudio Project?", 
+                    content = "
+                      If you work in RStudio, then the 
+                      <a href=\"https://support.rstudio.com/hc/en-us/articles/200526207-Using-Projects\" rel=\"nofollow\">RStudio Project</a>
+                      infrastructure is the best and most natural way of 
+                      organizing your work. The project file is a text file
+                      that contains some configuration values for your project.
+                      You don't have to edit it directly, because RStudio 
+                      automatically changes it according to your settings in 
+                      the RStudio menus.
+                    ",
+                    placement = "left",
+                    html = "true"
+                  )
+              ),
             shiny::selectInput(
               inputId = ns("open_selection"),
-              label = "Should a new RStudio Session be started directly?",
+              label = "Should a new RStudio Session be started?",
               choices = c("Yes", "No"),
               selected = "Yes",
               width = "95%"
-            ),
+            ) %>%
+              bsplus::shinyInput_label_embed(
+                bsplus::shiny_iconlink() %>%
+                  bsplus::bs_embed_popover(
+                    title = "What's going to happen?", 
+                    content = "
+                      If you choose Yes, then a new RStudio window will open
+                      and you can directly start to work in your new project.
+                    ",
+                    placement = "left",
+                    html = "true"
+                  )
+              ),
             shiny::actionButton(
               inputId = ns("run_use_compendium"),
               label = "Create new project",

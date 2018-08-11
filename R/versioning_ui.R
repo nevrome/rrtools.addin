@@ -10,7 +10,7 @@ versioning_ui <- function(id) {
       shiny::fillCol(
         shiny::div(
           class = "explainbox_1",
-          shiny::h4("Version Control with git?"),
+          shiny::h4("Version Control?"),
           shiny::HTML("<p> 
             Research is an incremental process. You create a hypothesis, test it, keep it or abandon it.
             Truly reproducible work should try to keep track. Version control software like 
@@ -37,7 +37,7 @@ versioning_ui <- function(id) {
           class = "function_interface_outer",
           shiny::div(
             class = "function_interface_inner",
-            shiny::h1("Version Control"),
+            shiny::h1("Version Control with Git"),
             shiny::actionButton(
               inputId = ns("run_git"),
               label = "Initialise your project as git repository",

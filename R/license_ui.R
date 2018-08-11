@@ -23,9 +23,9 @@ license_ui <- function(id) {
           shiny::h4("The function", shiny::strong("usethis::use_..._license")),
           shiny::HTML("
             <ol>
-              <li>Configuring DESCRIPTION file to include new License</li>
-              <li>Writing License files</li>
-              <li>Configuring R package files to ignore License files</li>
+              <li>Configuring DESCRIPTION file to include the new license</li>
+              <li>Writing LICENSE files</li>
+              <li>Configuring R package files to ignore LICENSE file</li>
             </ol>
           ")
         )
@@ -42,12 +42,41 @@ license_ui <- function(id) {
               choices = c("CC0", "MIT", "Apache_v2", "GPL_v3"),
               selected = "MIT",
               width = "95%"
-            ),
+            ) %>%
+              bsplus::shinyInput_label_embed(
+                bsplus::shiny_iconlink() %>%
+                  bsplus::bs_embed_popover(
+                    title = "What do these licenses offer?", 
+                    content = "
+                      <a href=\"https://creativecommons.org/share-your-work/public-domain/cc0/\" rel=\"nofollow\">CC0</a>,
+                      <a href=\"https://choosealicense.com/licenses/mit/\" rel=\"nofollow\">MIT</a>,
+                      <a href=\"https://choosealicense.com/licenses/apache-2.0/\" rel=\"nofollow\">Apache v2.0</a>,
+                      <a href=\"https://choosealicense.com/licenses/gpl-3.0/\" rel=\"nofollow\">GPL v3.0</a> <br>
+                      If you don't want to use one of these four you can add any 
+                      other license in your LICENSE file. But it's recommended
+                      not to use obscure or self-written licenses.
+                    ",
+                    placement = "left",
+                    html = "true"
+                  )
+              ),
             shiny::textInput(
               inputId = ns("license_names"),
-              label = "What's the name of the copyright holder? Separate multiple individuals with ;.",
+              label = "What's the name of the copyright holder? Separate multiple individuals with \";\".",
               width = "95%"
-            ),
+            ) %>%
+              bsplus::shinyInput_label_embed(
+                bsplus::shiny_iconlink() %>%
+                  bsplus::bs_embed_popover(
+                    title = "Who is the copyright holder?", 
+                    content = "
+                      Most likely you, maybe also your co-authors. 
+                      Uncer certain conditions also your company or institution.
+                    ",
+                    placement = "left",
+                    html = "true"
+                  )
+              ),
             shiny::actionButton(
               inputId = ns("run_license"),
               label = "Enable license",
