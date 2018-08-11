@@ -12,22 +12,24 @@ cloud_ui <- function(id) {
           class = "explainbox_1",
           shiny::h4("A remote git repository?"),
           shiny::HTML("<p> 
-            Research is an incremental process. You create a hypothesis, test it, keep it or abandon it.
-            Truly reproducible work should try to keep track. Version control software like 
-            <a href=\"https://git-scm.com\" rel=\"nofollow\">Git</a> is the best way to do this.
-            If you want to use it, you'll have to take 
-            <a href=\"https://jennybc.github.io/2014-05-12-ubc/ubc-r/session03_git.html#learngit\" rel=\"nofollow\">a deeper look</a>.
+            If you're using Git to track the progress of your work, then you can
+            link it to a web platform like
+            <a href=\"https://github.com/\" rel=\"nofollow\">Github</a>,
+            <a href=\"https://about.gitlab.com/\" rel=\"nofollow\">GitLab</a> or
+            <a href=\"https://bitbucket.org/\" rel=\"nofollow\">Bitbucket</a>.
+            You should do this to make your work available for everybody. 
+            The Websites also have good code management and community tools.
           </p>")
         ),
         shiny::div(
           class = "explainbox_2",
-          shiny::h4("The function", shiny::strong("usethis::use_git")),
+          shiny::h4("The function", shiny::strong("rrtools::use_github")),
           shiny::HTML("
             <ol>
-              <li>Initialising directory as Git repository</li>
-              <li>Configuring .gitignore file to work with R</li>
-              <li>Making an initial commit that contains the current files</li>
-              <li>Asking for restart of RStudio</li>
+              <li>Creating GitHub repository</li>
+              <li>Linking local project to Github repository</li>
+              <li>Adding GitHub links to R Package DESCRIPTION</li>
+              <li>Pushing local data to GitHub</li>
             </ol>
           ")
         )
