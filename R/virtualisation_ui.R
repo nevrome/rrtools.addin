@@ -48,9 +48,15 @@ virtualisation_ui <- function(id) {
               bsplus::shinyInput_label_embed(
                 bsplus::shiny_iconlink() %>%
                   bsplus::bs_embed_popover(
-                    title = "What's the difference?", 
+                    title = "What's a rocker image?", 
                     content = "
-                    test
+                      A docker container often builds on a preconfigured base image. 
+                      This simplifies the setup, because a basic system already exists,
+                      which often needs only minor changes to house your project.
+                      <a href=\"https://github.com/rocker-org/rocker\" rel=\"nofollow\">rocker</a> 
+                      provides great images for R projects. The four you can select here
+                      are optimized for reproducibility and  
+                      <a href=\"https://github.com/rocker-org/rocker-versioned\" rel=\"nofollow\">prepared for different tasks</a>. 
                     ",
                     placement = "left",
                     html = "true"
