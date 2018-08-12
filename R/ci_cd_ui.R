@@ -3,7 +3,7 @@ ci_cd_ui <- function(id) {
   ns <- shiny::NS(id)
   
   miniUI::miniTabPanel(
-    title = "CI/CD",
+    title = "CI",
     icon = shiny::icon("industry"),
     shiny::fillRow(
       flex = c(1, 1, 1),
@@ -12,11 +12,13 @@ ci_cd_ui <- function(id) {
           class = "explainbox_1",
           shiny::h4("Continous integration?"),
           shiny::HTML("<p> 
-		        Especially if you share your work on cloud version control platforms
-            like Github the README file is the 
-            <a href=\"https://help.github.com/articles/about-readmes/\" rel=\"nofollow\">face of your project</a>
-            for everybody who comes across it. It's important to give a good 
-            overview about what the project does and how users can get started with it.
+            CI is a concept of software development that
+            comprises powerful ideas like the automation of building, 
+            testing and deploying. 
+            For a compendium with complex code this can be useful, 
+            but also other projects can profit from automatic text rendering 
+            on platforms like
+            <a href=\"https://travis-ci.org/\" rel=\"nofollow\">Travis CI</a>.
 		      </p>")
         ),
         shiny::div(
