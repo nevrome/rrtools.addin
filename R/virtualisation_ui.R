@@ -12,11 +12,12 @@ virtualisation_ui <- function(id) {
           class = "explainbox_1",
           shiny::h4("Virtualization?"),
           shiny::HTML("<p> 
-		        Especially if you share your work on cloud version control platforms
-            like Github the README file is the 
-            <a href=\"https://help.github.com/articles/about-readmes/\" rel=\"nofollow\">face of your project</a>
-            for everybody who comes across it. It's important to give a good 
-            overview about what the project does and how users can get started with it.
+		        Software is constantly changing. Often old code does 
+            not run or old data can't be retrieved anymore. 
+            Data analysis scripts in R are especially vulnerable to this. 
+            Virtualisation software like
+            <a href=\"https://www.docker.com/\" rel=\"nofollow\">Docker</a> 
+            can store a compendium in a digital time capsule to keep it alive.
 		      </p>")
         ),
         shiny::div(
