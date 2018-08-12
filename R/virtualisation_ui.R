@@ -22,14 +22,12 @@ virtualisation_ui <- function(id) {
         ),
         shiny::div(
           class = "explainbox_2",
-          shiny::h4("The function", shiny::strong("rrtools::use_analysis")),
+          shiny::h4("The function", shiny::strong("rrtools::use_dockerfile")),
           shiny::HTML("
 		        <ol>
-              <li>Creating default README.Rmd</li>
-              <li>Rendering README.Rmd to Readme.md</li>
-              <li>Creating code of conduct</li>
-              <li>Creating instructions to contributors</li>
-              <li>Adding additional files to .Rbuildignore</li>
+              <li>Creating and configuring Dockerfile</li>
+              <li>Adding Dockerfile to .Rbuildignore</li>
+              <li>Opening Dockerfile</li>
             </ol>
 		      ")
         )
