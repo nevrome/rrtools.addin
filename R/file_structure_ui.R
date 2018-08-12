@@ -24,11 +24,8 @@ file_structure_ui <- function(id) {
           shiny::h4("The function", shiny::strong("rrtools::use_analysis")),
           shiny::HTML("
 		        <ol>
-              <li>Creating default README.Rmd</li>
-              <li>Rendering README.Rmd to Readme.md</li>
-              <li>Creating code of conduct</li>
-              <li>Creating instructions to contributors</li>
-              <li>Adding additional files to .Rbuildignore</li>
+              <li>Adding bookdown to Imports</li>
+              <li>Creating analysis/ directory with a lot of templates to create a research working environment</li>
             </ol>
 		      ")
         )
@@ -49,9 +46,12 @@ file_structure_ui <- function(id) {
               bsplus::shinyInput_label_embed(
                 bsplus::shiny_iconlink() %>%
                   bsplus::bs_embed_popover(
-                    title = "What's the difference?", 
+                    title = "What are the options?", 
                     content = "
-                      test
+                      The default is to create a top-level 'analysis' directory. 
+                      Other options are to write to the 'inst' directory, so that all the contents 
+                      will be included in the installed package) and 'vignettes' (as in a regular 
+                      package vignette).
                     ",
                     placement = "left",
                     html = "true"
@@ -67,9 +67,12 @@ file_structure_ui <- function(id) {
               bsplus::shinyInput_label_embed(
                 bsplus::shiny_iconlink() %>%
                   bsplus::bs_embed_popover(
-                    title = "What's the difference?", 
+                    title = "What's a template?", 
                     content = "
-                      test
+                      The template is a default .Rmd file where everything is configured to just work.
+                      You can start writing and figure out the details later. 
+                      At the moment there's just one template: 'paper.Rmd'. It's set up to knit to MS Word 
+                      using bookdown.
                     ",
                     placement = "left",
                     html = "true"
@@ -85,9 +88,14 @@ file_structure_ui <- function(id) {
               bsplus::shinyInput_label_embed(
                 bsplus::shiny_iconlink() %>%
                   bsplus::bs_embed_popover(
-                    title = "What's the difference?", 
+                    title = "Why not?", 
                     content = "
-                      test
+                      In some cases it can be useful to prevent Git from logging your data directory.
+                      You should select 'No', if you want to share your compendium on a Git cloud 
+                      platform like Github, but not the data, because it's not allowed for publishing
+                      or too big (> some hundred megabytes). In the latter case you could upload your data 
+                      to a (scientific) file hosting provider like for example
+                      <a href=\"https://figshare.com//\" rel=\"nofollow\">fighshare</a>.
                     ",
                     placement = "left",
                     html = "true"
