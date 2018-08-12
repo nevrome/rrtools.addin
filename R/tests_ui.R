@@ -10,13 +10,16 @@ tests_ui <- function(id) {
       shiny::fillCol(
         shiny::div(
           class = "explainbox_1",
-          shiny::h4("Bringing order into my files?"),
+          shiny::h4("Software tests?"),
           shiny::HTML("<p> 
-		        Especially if you share your work on cloud version control platforms
-            like Github the README file is the 
-            <a href=\"https://help.github.com/articles/about-readmes/\" rel=\"nofollow\">face of your project</a>
-            for everybody who comes across it. It's important to give a good 
-            overview about what the project does and how users can get started with it.
+		        If the code in a compendium gets more complex, 
+            it becomes more difficult to estimate the consequences of changes. 
+            Therefore code should be modular and automatically tested. 
+            In an R package
+            <a href=\"http://r-pkgs.had.co.nz/tests.html\" rel=\"nofollow\">testing</a>  
+            can be managed with the 
+            <a href=\"http://testthat.r-lib.org/\" rel=\"nofollow\">testthat</a>  
+            package.
 		      </p>")
         ),
         shiny::div(
@@ -38,7 +41,7 @@ tests_ui <- function(id) {
           class = "function_interface_outer",
           shiny::div(
             class = "function_interface_inner",
-            shiny::h1("Automatic tests"),
+            shiny::h1("Automatic tests with testthat"),
             shiny::actionButton(
               inputId = ns("run"),
               label = "Create testthat environment",
