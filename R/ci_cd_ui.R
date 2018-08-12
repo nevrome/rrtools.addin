@@ -48,9 +48,13 @@ ci_cd_ui <- function(id) {
               bsplus::shinyInput_label_embed(
                 bsplus::shiny_iconlink() %>%
                   bsplus::bs_embed_popover(
-                    title = "What's the difference?", 
+                    title = "With or without Docker?", 
                     content = "
-                    test
+                      If you don't use Docker, you'll get a vanilla travis config that builds, 
+                      installs and runs your compendium as an R package on travis. 
+                      The other type of configuration directs travis to build the Docker container (according 
+                      to the instructions in your Dockerfile) and push the successful result to 
+                      <a href=\"https://hub.docker.com/\" rel=\"nofollow\">Docker Hub</a>.
                     ",
                     placement = "left",
                     html = "true"
