@@ -1,0 +1,41 @@
+---
+output: github_document
+---
+
+[![Travis-CI Build Status](https://travis-ci.org/nevrome/rrtools.addin.svg?branch=master)](https://travis-ci.org/nevrome/rrtools.addin)
+
+# rrtools.addin
+
+This package provides a graphical user interface for some of the main functions of [Ben Marwick's rrtools package](https://github.com/benmarwick/rrtools).
+
+```{r, echo = FALSE}
+# take screenshot of every panel
+panels <- c("Overview", "Setup", "License", "Versioning", "Cloud", "Readme", "File structure", "Virtualisation", "CI", "Tests")
+for (i in seq_along(panels)) {
+  system(
+    paste0("timeout 3 R -e \"shiny::runApp(rrtools.addin::rrtools_assistant(startpanel = '", panels[i], "', run_app = FALSE), port = 8081, launch.browser = FALSE)\""), 
+    wait = FALSE
+  )
+  Sys.sleep(1)
+  webshot::webshot(url = "http://127.0.0.1:8081/", file = paste0("inst/gif/webshot_", 100 + i, "_", panels[i], ".png"), vwidth = 1200, vheight = 500)
+  Sys.sleep(1)
+}
+# make gif from individual screenshots
+system("convert -delay 150 -loop 0 inst/gif/*.png inst/gif/rrtools_addin_demo.gif")
+```
+
+![addin demo](https://github.com/nevrome/rrtools.addin/raw/master/inst/gif/rrtools_addin_demo.gif)
+
+## Installation
+
+```{r, eval=FALSE}
+# install.packages("devtools")
+devtools::install_github("benmarwick/rrtools")
+devtools::install_github("nevrome/rrtools.addin")
+```
+
+## How to use
+
+```{r, eval=FALSE}
+rrtools.addin::rrtools_assistant()
+```
