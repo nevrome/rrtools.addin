@@ -5,12 +5,14 @@
 #' README (\url{https://github.com/benmarwick/rrtools}).
 #'
 #' @param startpanel Character. Which page should be selected when the app is started? Default: "Overview".
+#' @param run_app Logical. Should the function start the app (TRUE) or return a shiny app object (FALSE)? Default: TRUE.
 #'
 #' @importFrom magrittr %>%
 #'
 #' @export
 rrtools_assistant <- function(
-  startpanel = "Overview"
+  startpanel = "Overview",
+  run_app = TRUE
 ) {
   
   shiny::addResourcePath("image", system.file("image", package = "rrtools.addin"))
@@ -112,13 +114,18 @@ rrtools_assistant <- function(
     })
 
   }
+  
+  app_object <- shiny::shinyApp(ui, server)
 
   #### run app ####
-  shiny::runGadget(
-    ui,
-    server,
-    viewer = shiny::dialogViewer("rrtools", width = 1200, height = 500),
-    stopOnCancel = FALSE
-  )
+  if (run_app) {
+    shiny::runGadget(
+      app_object,
+      viewer = shiny::dialogViewer("rrtools", width = 1200, height = 500),
+      stopOnCancel = FALSE
+    )
+  } else {
+    return(app_object)
+  }
 
 }
