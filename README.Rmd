@@ -17,7 +17,7 @@ for (i in seq_along(panels)) {
     wait = FALSE
   )
   Sys.sleep(1)
-  webshot::webshot(url = "http://127.0.0.1:8081/", file = paste0("inst/gif/webshot_", 100 + i, "_", panels[i], ".png"), vwidth = 1200, vheight = 500)
+  webshot::webshot(url = "http://127.0.0.1:8081/", file = paste0("inst/gif/webshot_", 100 + i, "_", ".png"), vwidth = 1200, vheight = 500)
   Sys.sleep(1)
 }
 # make gif from individual screenshots
