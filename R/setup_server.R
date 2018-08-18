@@ -31,7 +31,7 @@ setup_server <- function(input, output, session) {
             "message('This project is set up by rrtools.')",
             "message('You can start working now or apply some more basic configuration.')",
             "message('Check out https://github.com/benmarwick/rrtools for an explanation of all the project configuration functions of rrtools.')",
-            "message('Or just run the rrtools configuration addin: \"rrtools::config_assistant()\"')",
+            "message('Or just run the rrtools configuration addin: \"rrtools.addin::rrtools_assistant()\"')",
             "invisible(file.remove('.Rprofile'))"
           ),
           fileConn
