@@ -4,7 +4,10 @@
 \alias{rrtools_assistant}
 \title{rrtools RStudio Addin}
 \usage{
-rrtools_assistant()
+rrtools_assistant(startpanel = "Overview")
+}
+\arguments{
+\item{startpanel}{Character. Which page should be selected when the app is started? Default: "Overview".}
 }
 \description{
 This addin is a simplified interface to Ben Marwicks's rrtools package.

@@ -4,11 +4,15 @@
 #' For more documentation please check out the Addin itself and the rrtools
 #' README (\url{https://github.com/benmarwick/rrtools}).
 #'
+#' @param startpanel Character. Which page should be selected when the app is started? Default: "Overview".
+#'
 #' @importFrom magrittr %>%
 #'
 #' @export
-rrtools_assistant <- function() {
-
+rrtools_assistant <- function(
+  startpanel = "Overview"
+) {
+  
   shiny::addResourcePath("image", system.file("image", package = "rrtools.addin"))
   
   #### ui ####
@@ -76,7 +80,9 @@ rrtools_assistant <- function() {
         file_structure_ui("file_structure_general"),
         virtualisation_ui("virtualisation_general"),
         ci_cd_ui("ci_cd_general"),
-        tests_ui("tests_general")
+        tests_ui("tests_general"),
+        # options for miniTabstripPanel
+        selected = startpanel
       )
     )
   }
