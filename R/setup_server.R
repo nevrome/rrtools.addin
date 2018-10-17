@@ -23,20 +23,6 @@ setup_server <- function(input, output, session) {
     
     shiny::observeEvent(input$run_use_compendium, {
       if (use_compendium_path_ready() != "not yet definded") {
-        # welcome message in new repo -- should be part of rrtools
-        dir.create(use_compendium_path_ready())
-        fileConn <- file(file.path(use_compendium_path_ready(), ".Rprofile"))
-        writeLines(
-          c(
-            "message('This project is set up by rrtools.')",
-            "message('You can start working now or apply some more basic configuration.')",
-            "message('Check out https://github.com/benmarwick/rrtools for an explanation of all the project configuration functions of rrtools.')",
-            "message('Or just run the rrtools configuration addin: \"rrtools.addin::rrtools_assistant()\"')",
-            "invisible(file.remove('.Rprofile'))"
-          ),
-          fileConn
-        )
-        close(fileConn)
         # prepare decisions
         rstudio_param <- switch(
           input$rstudio_selection,
