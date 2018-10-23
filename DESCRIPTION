@@ -24,3 +24,5 @@ Imports:
   shinyFiles,
   tools,
   usethis
+Remotes:
+  git@github.com:benmarwick/rrtools.git
