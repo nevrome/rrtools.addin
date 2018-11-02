@@ -1,7 +1,15 @@
+/* file browser */
+.sF-breadcrumps {
+  width: calc(90% - 255px) !important;
+}
+.modal-content {
+  width: 700px;
+}
 .modal-body {
-  height: 300px;
+  height: 330px;
   overflow-y: scroll;
 }
+/* boxes */
 .explainbox_1 {
   position: relative;
   height: 170px;
