@@ -35,7 +35,7 @@ file_structure_ui <- function(id) {
           class = "function_interface_outer",
           shiny::div(
             class = "function_interface_inner",
-            shiny::h1("Analysis directory"),
+            shiny::h3("Analysis directory"),
             shiny::selectInput(
               inputId = ns("location_selection"),
               label = "Where should the analysis directory be created?",

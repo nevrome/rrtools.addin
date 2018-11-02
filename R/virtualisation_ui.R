@@ -37,7 +37,7 @@ virtualisation_ui <- function(id) {
           class = "function_interface_outer",
           shiny::div(
             class = "function_interface_inner",
-            shiny::h1("Virtualization with Docker"),
+            shiny::h3("Virtualization with Docker"),
             shiny::selectInput(
               inputId = ns("rocker_selection"),
               label = "On which rocker image should this container be based?",

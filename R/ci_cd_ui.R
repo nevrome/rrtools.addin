@@ -37,7 +37,7 @@ ci_cd_ui <- function(id) {
           class = "function_interface_outer",
           shiny::div(
             class = "function_interface_inner",
-            shiny::h1("Continous integration with Travis CI"),
+            shiny::h3("Continous integration with Travis CI"),
             shiny::selectInput(
               inputId = ns("docker_selection"),
               label = "With Docker?",

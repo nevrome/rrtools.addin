@@ -38,7 +38,7 @@ readme_ui <- function(id) {
 		      class = "function_interface_outer",
 		      shiny::div(
 		        class = "function_interface_inner",
-		        shiny::h1("README.rmd and README.md"),
+		        shiny::h3("README.rmd and README.md"),
 		        shiny::actionButton(
 		          inputId = ns("run_readme"),
 		          label = "Add a README file to your project",

@@ -10,7 +10,7 @@ license_ui <- function(id) {
       shiny::fillCol(
         shiny::div(
           class = "explainbox_1",
-          shiny::h4("What is a license and why should I care?"),
+          shiny::h4("I need a software license?"),
           shiny::HTML("<p> 
             A research compendium usually contains code and data. If you provide your intellectual property
             in an open and reproducible form, you have to assume that others will use it for their purposes.
@@ -35,7 +35,7 @@ license_ui <- function(id) {
           class = "function_interface_outer",
           shiny::div(
             class = "function_interface_inner",
-            shiny::h1("License"),
+            shiny::h3("License"),
             shiny::selectInput(
               inputId = ns("license_selection"),
               label = "Which License do you want?",

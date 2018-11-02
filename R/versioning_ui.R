@@ -37,7 +37,7 @@ versioning_ui <- function(id) {
           class = "function_interface_outer",
           shiny::div(
             class = "function_interface_inner",
-            shiny::h1("Version Control with Git"),
+            shiny::h3("Version Control with Git"),
             shiny::actionButton(
               inputId = ns("run_git"),
               label = "Initialise your project as git repository",

@@ -39,7 +39,7 @@ cloud_ui <- function(id) {
           class = "function_interface_outer",
           shiny::div(
             class = "function_interface_inner",
-            shiny::h1("Git Cloud Plaform: GitHub"),
+            shiny::h3("Git Cloud Plaform: GitHub"),
             shiny::textInput(
               inputId = ns("github_auth_token"),
               label = "Your personal GitHub access token:",

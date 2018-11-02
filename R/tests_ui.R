@@ -38,7 +38,7 @@ tests_ui <- function(id) {
           class = "function_interface_outer",
           shiny::div(
             class = "function_interface_inner",
-            shiny::h1("Automatic tests with testthat"),
+            shiny::h3("Automatic tests with testthat"),
             shiny::actionButton(
               inputId = ns("run"),
               label = "Create testthat environment",
