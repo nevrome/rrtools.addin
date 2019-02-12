@@ -1,3 +1,7 @@
+/* general layout */
+.h2, h2 {
+  font-size: 20px;
+}
 /* file browser */
 .sF-breadcrumps {
   width: calc(90% - 255px) !important;
