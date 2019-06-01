@@ -1,53 +1,58 @@
 setup_server <- function(input, output, session) {
   
-    shinyFiles::shinyDirChoose(input, 'use_compendium_path', roots = c(home = path.expand("~")))
-    
-    use_compendium_path_ready <- shiny::reactive({
-      home <- path.expand("~")
-      if(length(input$use_compendium_path) == 1) {
-        path <- "not yet definded"
-      } else {
-        path <- file.path(
-          file.path(
-            home, paste(unlist(input$use_compendium_path$path[-1]), collapse = .Platform$file.sep)
-          ),
-          input$use_compendium_project_name
+  osSystem <- Sys.info()["sysname"]
+  if (osSystem == "Linux") {
+    def_roots <- c(home = "~")
+  } else {
+    def_roots <- shinyFiles::getVolumes()
+  }
+  
+  shinyFiles::shinyDirChoose(input, 'use_compendium_path', roots = def_roots)  
+  
+  use_compendium_path_ready <- shiny::reactive({
+    if(length(input$use_compendium_path) == 1) {
+      path <- "not yet definded"
+    } else {
+      path <- file.path(
+        def_roots, 
+        paste(unlist(input$use_compendium_path$path[-1]), collapse = .Platform$file.sep),
+        input$use_compendium_project_name
+      )
+    }
+    return(path)
+  })
+  
+  output$use_compendium_path_ready <- shiny::renderUI({
+    shiny::HTML("<font color=\"red\">", use_compendium_path_ready(), "</font>")
+  })
+  
+  shiny::observeEvent(input$run_use_compendium, {
+    if (use_compendium_path_ready() != "not yet definded") {
+      # prepare decisions
+      rstudio_param <- switch(
+        input$rstudio_selection,
+        Yes = TRUE,
+        No = FALSE
+      )
+      open_param <- switch(
+        input$open_selection,
+        Yes = TRUE,
+        No = FALSE
+      )
+      # run use_compendium and close app
+      rstudioapi::sendToConsole(
+        paste0(
+          "rrtools::use_compendium(", 
+            "path = \"", use_compendium_path_ready(), "\",",
+            "rstudio = ", rstudio_param, ",",
+            "open = ", open_param,
+          ")"
         )
-      }
-      return(path)
-    })
-    
-    output$use_compendium_path_ready <- shiny::renderUI({
-      shiny::HTML("<font color=\"red\">", use_compendium_path_ready(), "</font>")
-    })
-    
-    shiny::observeEvent(input$run_use_compendium, {
-      if (use_compendium_path_ready() != "not yet definded") {
-        # prepare decisions
-        rstudio_param <- switch(
-          input$rstudio_selection,
-          Yes = TRUE,
-          No = FALSE
-        )
-        open_param <- switch(
-          input$open_selection,
-          Yes = TRUE,
-          No = FALSE
-        )
-        # run use_compendium and close app
-        rstudioapi::sendToConsole(
-          paste0(
-            "rrtools::use_compendium(", 
-              "path = \"", use_compendium_path_ready(), "\",",
-              "rstudio = ", rstudio_param, ",",
-              "open = ", open_param,
-            ")"
-          )
-        )
-        shiny::stopApp()
-      } else {
-        shiny::showNotification("Path not defined.")
-      }
-    })
+      )
+      shiny::stopApp()
+    } else {
+      shiny::showNotification("Path not defined.")
+    }
+  })
 
 }
