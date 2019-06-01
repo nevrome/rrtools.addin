@@ -1,9 +1,9 @@
 setup_server <- function(input, output, session) {
   
-    shinyFiles::shinyDirChoose(input, 'use_compendium_path', roots = c(home = "~"))
+    shinyFiles::shinyDirChoose(input, 'use_compendium_path', roots = c(home = path.expand("~")))
     
     use_compendium_path_ready <- shiny::reactive({
-      home <- normalizePath("~")
+      home <- path.expand("~")
       if(length(input$use_compendium_path) == 1) {
         path <- "not yet definded"
       } else {
