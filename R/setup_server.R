@@ -13,11 +13,18 @@ setup_server <- function(input, output, session) {
     if(length(input$use_compendium_path) == 1) {
       path <- "not yet definded"
     } else {
-      path <- file.path(
-        def_roots, 
-        paste(unlist(input$use_compendium_path$path[-1]), collapse = .Platform$file.sep),
-        input$use_compendium_project_name
-      )
+      if (osSystem == "Linux") {
+        path <- file.path(
+          def_roots,
+          paste(unlist(input$use_compendium_path$path), collapse = .Platform$file.sep),
+          input$use_compendium_project_name
+        )
+      } else {
+        path <- file.path(
+          paste(unlist(input$use_compendium_path$path), collapse = .Platform$file.sep),
+          input$use_compendium_project_name
+        )
+      }
     }
     return(path)
   })
