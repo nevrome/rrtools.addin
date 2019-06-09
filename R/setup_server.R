@@ -13,18 +13,10 @@ setup_server <- function(input, output, session) {
     if(length(input$use_compendium_path) == 1) {
       path <- "not yet definded"
     } else {
-      if (osSystem == "Linux") {
-        path <- file.path(
-          def_roots,
-          paste(unlist(input$use_compendium_path$path), collapse = .Platform$file.sep),
-          input$use_compendium_project_name
-        )
-      } else {
-        path <- file.path(
-          paste(unlist(input$use_compendium_path$path), collapse = .Platform$file.sep),
-          input$use_compendium_project_name
-        )
-      }
+      path <- file.path(
+        shinyFiles::parseDirPath(def_roots, input$use_compendium_path),
+        input$use_compendium_project_name
+      )
     }
     return(path)
   })
