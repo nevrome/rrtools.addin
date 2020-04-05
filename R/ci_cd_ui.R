@@ -26,8 +26,8 @@ ci_cd_ui <- function(id) {
           shiny::h4("The function", shiny::strong("usethis::use_travis")),
           shiny::HTML("
 		        <ol>
-              <li>Creating .travis.yml file</li>
-              <li>Opening browser to activate travis for your project</li>
+              <li>Creates .travis.yml file</li>
+              <li>Opens browser to activate travis for your project</li>
             </ol>
 		      ")
         )

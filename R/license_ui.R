@@ -23,9 +23,9 @@ license_ui <- function(id) {
           shiny::h4("The function", shiny::strong("usethis::use_..._license")),
           shiny::HTML("
             <ol>
-              <li>Configuring DESCRIPTION file to include the new license</li>
-              <li>Writing LICENSE files</li>
-              <li>Configuring R package files to ignore LICENSE file</li>
+              <li>Configures DESCRIPTION file to include the new license</li>
+              <li>Writes LICENSE files</li>
+              <li>Configures R package files to ignore LICENSE file</li>
             </ol>
           ")
         )

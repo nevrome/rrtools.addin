@@ -24,8 +24,8 @@ file_structure_ui <- function(id) {
           shiny::h4("The function", shiny::strong("rrtools::use_analysis")),
           shiny::HTML("
 		        <ol>
-              <li>Adding bookdown to Imports</li>
-              <li>Creating analysis/ directory with a lot of templates to create a research working environment</li>
+              <li>Adds bookdown to Imports</li>
+              <li>Creates analysis/ directory with a lot of templates to create a working environment</li>
             </ol>
 		      ")
         )

@@ -27,8 +27,8 @@ tests_ui <- function(id) {
           shiny::h4("The function", shiny::strong("usethis::use_testthat")),
           shiny::HTML("
 		        <ol>
-              <li>Creating tests/testhat directory</li>
-              <li>Creating tests/testthat.R configuration file</li>
+              <li>Creates tests/testhat directory</li>
+              <li>Creates tests/testthat.R configuration file</li>
             </ol>
 		      ")
         )

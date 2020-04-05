@@ -25,9 +25,9 @@ virtualisation_ui <- function(id) {
           shiny::h4("The function", shiny::strong("rrtools::use_dockerfile")),
           shiny::HTML("
 		        <ol>
-              <li>Creating and configuring Dockerfile</li>
-              <li>Adding Dockerfile to .Rbuildignore</li>
-              <li>Opening Dockerfile</li>
+              <li>Creates and configures Dockerfile</li>
+              <li>Adds Dockerfile to .Rbuildignore</li>
+              <li>Opens Dockerfile</li>
             </ol>
 		      ")
         )

@@ -24,11 +24,11 @@ readme_ui <- function(id) {
 		      shiny::h4("The function", shiny::strong("rrtools::use_readme_rmd")),
 		      shiny::HTML("            
             <ol>
-              <li>Creating default README.Rmd</li>
-              <li>Rendering README.Rmd to Readme.md</li>
-              <li>Creating code of conduct</li>
-              <li>Creating instructions to contributors</li>
-              <li>Adding additional files to .Rbuildignore</li>
+              <li>Creates default README.Rmd</li>
+              <li>Renders README.Rmd to Readme.md</li>
+              <li>Creates code of conduct</li>
+              <li>Creates instructions to contributors</li>
+              <li>Adds additional files to .Rbuildignore</li>
             </ol>
 		      ")
 		    )
