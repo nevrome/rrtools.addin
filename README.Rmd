@@ -10,7 +10,7 @@ This package provides a graphical user interface for some of the main functions 
 
 ```{r, echo = FALSE}
 # take screenshot of every panel
-panels <- c("Overview", "Setup", "License", "Versioning", "Cloud", "Readme", "File structure", "Virtualisation", "CI", "Tests")
+panels <- c("Overview", "Setup", "License", "Readme", "File structure", "Virtualisation", "CI", "Tests")
 for (i in seq_along(panels)) {
   system(
     paste0("timeout 3 R -e \"shiny::runApp(rrtools.addin::rrtools_assistant(startpanel = '", panels[i], "', run_app = FALSE), port = 8081, launch.browser = FALSE)\""), 
