@@ -76,8 +76,6 @@ rrtools_assistant <- function(
         # submodules
         setup_ui("setup_general"),
         license_ui("license_general"),
-        versioning_ui("versioning_general"),
-        cloud_ui("cloud_general"),
         readme_ui("readme_general"),
         file_structure_ui("file_structure_general"),
         virtualisation_ui("virtualisation_general"),
@@ -95,8 +93,6 @@ rrtools_assistant <- function(
     # submodules
     shiny::callModule(license_server, id = "license_general")
     shiny::callModule(setup_server, id = "setup_general")
-    shiny::callModule(versioning_server, id = "versioning_general")
-    shiny::callModule(cloud_server, id = "cloud_general")
     shiny::callModule(readme_server, id = "readme_general")
     shiny::callModule(file_structure_server, id = "file_structure_general")
     shiny::callModule(virtualisation_server, id = "virtualisation_general")
