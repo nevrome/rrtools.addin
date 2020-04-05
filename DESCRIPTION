@@ -13,7 +13,7 @@ LazyData: true
 URL: https://github.com/nevrome/rrtools.addin
 BugReports: https://github.com/nevrome/rrtools.addin/issues
 Suggests: testthat
-RoxygenNote: 6.1.1
+RoxygenNote: 7.1.0
 Imports:
   bsplus,
   magrittr,
