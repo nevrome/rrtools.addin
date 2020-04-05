@@ -65,7 +65,12 @@ ci_cd_ui <- function(id) {
               label = "Add a travis config file",
               icon = shiny::icon("arrow-circle-right"),
               width = "95%"
-            )
+            ),
+            shiny::br(), shiny::br(),
+            shiny::HTML("<p>
+              rrtools offers a similar function for Circle CI: <code>rrtools::use_circleci()</code>. 
+              Check it out if Travis CI does not fit your needs.
+            </p>")
           )
         )
       ),
