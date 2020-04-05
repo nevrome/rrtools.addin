@@ -14,8 +14,7 @@ setup_server <- function(input, output, session) {
       path <- "not yet definded"
     } else {
       path <- file.path(
-        shinyFiles::parseDirPath(def_roots, input$use_compendium_path),
-        input$use_compendium_project_name
+        shinyFiles::parseDirPath(def_roots, input$use_compendium_path)
       )
     }
     return(path)

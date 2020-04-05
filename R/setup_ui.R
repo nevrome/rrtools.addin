@@ -24,10 +24,9 @@ setup_ui <- function(id) {
           shiny::h4("The function", shiny::strong("rrtools::use_compendium")),
           shiny::HTML("
             <ol>
-              <li>Creating project directory</li>
-              <li>Creating R package directories</li>
-              <li>Writing and Preconfiguring R package files</li>
-              <li>Opening project in RStudio</li>
+              <li>Creates an R package \"directory-name\" in a directory</li>
+              <li>Writes and Preconfigures R package files</li>
+              <li>Opens project in RStudio</li>
             </ol>
           ")
         )
@@ -38,36 +37,35 @@ setup_ui <- function(id) {
           shiny::div(
             class = "function_interface_inner",
             shiny::h3("Create a research compendium"),
-            shiny::strong("Select the parent directory of the new project:"),
+            shiny::strong("Create an empty, git initialized directory"),
+            shiny::HTML("<p> 
+                Usually we want our research compendium to be managed by the version control software 
+                <a href=\"https://git-scm.com\" rel=\"nofollow\">Git</a>.
+                Start on Github, Gitlab, or a similar web service, and 
+                <a href=\"https://happygitwithr.com/new-github-first.html\" rel=\"nofollow\">create an empty repository</a>
+                called pkgname (you should use a different name, please follow the rules below) on that service. 
+                Then clone that repository to have a local empty directory on your computer, called pkgname, 
+                that is linked to this remote repository. 
+              </p> 
+              <p>
+                The name of your project has to be a good representation 
+                of its content and also has to fulfil some technical 
+                requirements. See 
+                <a href=\"http://r-pkgs.had.co.nz/package.html#naming\" rel=\"nofollow\">Hadley Wickhams helpful hints</a>
+                for advice. Jim Hesters R package 
+                <a href=\"https://github.com/ropenscilabs/available\" rel=\"nofollow\">available</a>
+                makes it easy to check if your name is already in use 
+                somewhere or if it has some unintended meanings.
+              </p>"
+            ),
+            shiny::strong("Select the directory:"),
             shinyFiles::shinyDirButton(
               id = ns("use_compendium_path"),
               label = "Choose directory",
               title = "Directory selection",
               icon = shiny::icon("folder")
             ),
-            shiny::textInput(
-              inputId = ns("use_compendium_project_name"),
-              label = "Set a project name:",
-              width = "95%"
-            ) %>%
-              bsplus::shinyInput_label_embed(
-                bsplus::shiny_iconlink() %>%
-                  bsplus::bs_embed_popover(
-                    title = "How to name a project?", 
-                    content = "
-                      The name of your project has to be a good representation 
-                      of its content and also has to fulfil some technical 
-                      requirements. See 
-                      <a href=\"http://r-pkgs.had.co.nz/package.html#naming\" rel=\"nofollow\">Hadley Wickhams helpful hints</a>
-                      for advice. Jim Hesters R package 
-                      <a href=\"https://github.com/ropenscilabs/available\" rel=\"nofollow\">available</a>
-                      makes it easy to check if your name is already in use 
-                      somewhere or if it has some unintended meanings.
-                    ",
-                    placement = "left",
-                    html = "true"
-                  )
-              ),
+            shiny::br(),
             shiny::strong("The new project will be created here:"),
             shiny::htmlOutput(ns("use_compendium_path_ready")),
             shiny::selectInput(
