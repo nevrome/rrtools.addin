@@ -57,8 +57,8 @@ rrtools_assistant <- function(
                   work using the R package structure as the basis for a research compendium. </p>
                 "),
                 shiny::HTML("
-                  <p> This Addin allows to use and understand the most important rrtools functions, their context and
-                  their main options. </p> 
+                  <p> This Addin allows to access some, but not all of the functionality in the rrtools package.
+                  Please see the rrtools README for more detailed information.</p> 
                 ")
               )
             ),
