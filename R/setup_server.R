@@ -4,7 +4,7 @@ setup_server <- function(input, output, session) {
   if (osSystem == "Linux") {
     def_roots <- c(home = "~")
   } else {
-    def_roots <- shinyFiles::getVolumes()
+    def_roots <- shinyFiles::getVolumes()()
   }
   
   shinyFiles::shinyDirChoose(input, 'use_compendium_path', roots = def_roots)  
