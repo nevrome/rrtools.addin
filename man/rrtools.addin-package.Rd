@@ -6,10 +6,7 @@
 \alias{rrtools.addin-package}
 \title{rrtools.addin: A graphical user interface for some of the main functions of the rrtools package}
 \description{
-The rrtools package provides functions to create an R package research compendium -
-             a powerful tool to create, manage and share reproducible research. 
-             rrtools.addin is a graphical interface to this package to make the start as easy as possible.
-             It only provides one function to start the addin: rrtools_assistant().
+The rrtools package provides functions to create an R package research compendium - a powerful tool to create, manage and share reproducible research. rrtools.addin is a graphical interface to this package to make the start as easy as possible. It only provides one function to start the addin: rrtools_assistant().
 }
 \seealso{
 Useful links:

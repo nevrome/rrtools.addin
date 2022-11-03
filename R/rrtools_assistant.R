@@ -79,7 +79,7 @@ rrtools_assistant <- function(
         readme_ui("readme_general"),
         file_structure_ui("file_structure_general"),
         virtualisation_ui("virtualisation_general"),
-        ci_cd_ui("ci_cd_general"),
+        #ci_cd_ui("ci_cd_general"),
         tests_ui("tests_general"),
         # options for miniTabstripPanel
         selected = startpanel

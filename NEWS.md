@@ -1,0 +1,1 @@
+- V0.2.1: Removed references to deprecated function `rrtools::use_travis`
