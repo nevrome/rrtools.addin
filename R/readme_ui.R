@@ -4,7 +4,7 @@ readme_ui <- function(id) {
   
 	miniUI::miniTabPanel(
 		title = "Readme",
-		icon = shiny::icon("file-text"),
+		icon = shiny::icon("file-lines"),
 		shiny::fillRow(
 		  flex = c(1, 1, 1),
 		  shiny::fillCol(
@@ -42,7 +42,7 @@ readme_ui <- function(id) {
 		        shiny::actionButton(
 		          inputId = ns("run_readme"),
 		          label = "Add a README file to your project",
-		          icon = shiny::icon("arrow-circle-right"),
+		          icon = shiny::icon("circle-arrow-right"),
 		          width = "95%"
 		        )
 		      )

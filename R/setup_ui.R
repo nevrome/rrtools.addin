@@ -76,7 +76,7 @@ setup_ui <- function(id) {
               width = "95%"
             ) %>%
               bsplus::shinyInput_label_embed(
-                bsplus::shiny_iconlink() %>%
+                bsplus::shiny_iconlink("circle-info") %>%
                   bsplus::bs_embed_popover(
                     title = "What's an RStudio Project?", 
                     content = "
@@ -101,7 +101,7 @@ setup_ui <- function(id) {
               width = "95%"
             ) %>%
               bsplus::shinyInput_label_embed(
-                bsplus::shiny_iconlink() %>%
+                bsplus::shiny_iconlink("circle-info") %>%
                   bsplus::bs_embed_popover(
                     title = "What's going to happen?", 
                     content = "
@@ -115,7 +115,7 @@ setup_ui <- function(id) {
             shiny::actionButton(
               inputId = ns("run_use_compendium"),
               label = "Create new project",
-              icon = shiny::icon("arrow-circle-right"),
+              icon = shiny::icon("circle-arrow-right"),
               width = "95%"
             )
           )

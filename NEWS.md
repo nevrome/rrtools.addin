@@ -1,1 +1,2 @@
+- V0.2.2: Updated fontawesome icon names to avoid warnings in the console
 - V0.2.1: Removed references to deprecated function `rrtools::use_travis`

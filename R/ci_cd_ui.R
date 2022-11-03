@@ -46,7 +46,7 @@ ci_cd_ui <- function(id) {
               width = "95%"
             ) %>%
               bsplus::shinyInput_label_embed(
-                bsplus::shiny_iconlink() %>%
+                bsplus::shiny_iconlink("circle-info") %>%
                   bsplus::bs_embed_popover(
                     title = "With or without Docker?", 
                     content = "

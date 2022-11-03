@@ -46,7 +46,7 @@ virtualisation_ui <- function(id) {
               width = "95%"
             ) %>%
               bsplus::shinyInput_label_embed(
-                bsplus::shiny_iconlink() %>%
+                bsplus::shiny_iconlink("circle-info") %>%
                   bsplus::bs_embed_popover(
                     title = "What's a rocker image?", 
                     content = "
@@ -65,7 +65,7 @@ virtualisation_ui <- function(id) {
             shiny::actionButton(
               inputId = ns("run"),
               label = "Add a Dockerfile",
-              icon = shiny::icon("arrow-circle-right"),
+              icon = shiny::icon("circle-arrow-right"),
               width = "95%"
             )
           )

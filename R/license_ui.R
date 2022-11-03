@@ -4,7 +4,7 @@ license_ui <- function(id) {
   
 	miniUI::miniTabPanel(
     title = "License",
-    icon = shiny::icon("handshake-o"),
+    icon = shiny::icon("handshake"),
     shiny::fillRow(
       flex = c(1, 1, 1),
       shiny::fillCol(
@@ -44,7 +44,7 @@ license_ui <- function(id) {
               width = "95%"
             ) %>%
               bsplus::shinyInput_label_embed(
-                bsplus::shiny_iconlink() %>%
+                bsplus::shiny_iconlink("circle-info") %>%
                   bsplus::bs_embed_popover(
                     title = "What do these licenses offer?", 
                     content = "
@@ -66,7 +66,7 @@ license_ui <- function(id) {
               width = "95%"
             ) %>%
               bsplus::shinyInput_label_embed(
-                bsplus::shiny_iconlink() %>%
+                bsplus::shiny_iconlink("circle-info") %>%
                   bsplus::bs_embed_popover(
                     title = "Who is the copyright holder?", 
                     content = "
@@ -80,7 +80,7 @@ license_ui <- function(id) {
             shiny::actionButton(
               inputId = ns("run_license"),
               label = "Enable license",
-              icon = shiny::icon("arrow-circle-right"),
+              icon = shiny::icon("circle-arrow-right"),
               width = "95%"
             )
           )

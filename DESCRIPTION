@@ -1,6 +1,6 @@
 Package: rrtools.addin
 Title: A graphical user interface for some of the main functions of the rrtools package
-Version: 0.2.1
+Version: 0.2.2
 Authors@R: person("Clemens", "Schmid", email = "clemens@nevrome.de", role = c("aut", "cre"))
 Description: The rrtools package provides functions to create an R package research compendium -
              a powerful tool to create, manage and share reproducible research. 

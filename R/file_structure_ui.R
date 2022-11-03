@@ -44,7 +44,7 @@ file_structure_ui <- function(id) {
               width = "95%"
             ) %>%
               bsplus::shinyInput_label_embed(
-                bsplus::shiny_iconlink() %>%
+                bsplus::shiny_iconlink("circle-info") %>%
                   bsplus::bs_embed_popover(
                     title = "What are the options?", 
                     content = "
@@ -65,7 +65,7 @@ file_structure_ui <- function(id) {
               width = "95%"
             ) %>%
               bsplus::shinyInput_label_embed(
-                bsplus::shiny_iconlink() %>%
+                bsplus::shiny_iconlink("circle-info") %>%
                   bsplus::bs_embed_popover(
                     title = "What's a template?", 
                     content = "
@@ -86,7 +86,7 @@ file_structure_ui <- function(id) {
               width = "95%"
             ) %>%
               bsplus::shinyInput_label_embed(
-                bsplus::shiny_iconlink() %>%
+                bsplus::shiny_iconlink("circle-info") %>%
                   bsplus::bs_embed_popover(
                     title = "Why not?", 
                     content = "
@@ -104,7 +104,7 @@ file_structure_ui <- function(id) {
             shiny::actionButton(
               inputId = ns("run"),
               label = "Create the analysis directory",
-              icon = shiny::icon("arrow-circle-right"),
+              icon = shiny::icon("circle-arrow-right"),
               width = "95%"
             )
           )

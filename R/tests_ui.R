@@ -42,7 +42,7 @@ tests_ui <- function(id) {
             shiny::actionButton(
               inputId = ns("run"),
               label = "Create testthat environment",
-              icon = shiny::icon("arrow-circle-right"),
+              icon = shiny::icon("circle-arrow-right"),
               width = "95%"
             )
           )
